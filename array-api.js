@@ -8,7 +8,7 @@
 
 // Q2. make an array out of a string
 {
-  const fruits = '🍎, 🥝, 🍌, 🍒';
+  const fruits = 'abcdefg';
   const result2 = fruits.split(",");
   console.log(result2);
 }
