@@ -19,3 +19,5 @@ function solution(new_id) {
 return new_id;
 
 }
+
+new_id = ""
