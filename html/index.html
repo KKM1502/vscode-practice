@@ -1,45 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My first web page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      img.me {
-        width: 300px;
-        border-radius: 150px;
-        float: left;
-        margin-right: auto;
-        margin-left: auto;
-        object-fit: cover;
-      }
-      p {
-        font-weight: bold;
-        float: none;
-      }
-      img.us {
-        width: 500px;
-        border-radius: 150px;
-        float: right;
-        margin-right: auto;
-        object-fit: cover;
-      }
-    </style>
+    <title>Document</title>
   </head>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar py-4 navbar-expand-lg bg-light ml">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">김경민영구없다</span>
+      <a
+        href="http://127.0.0.1:5500/vscode-practice/html/index.html"
+        class="navbar-brand mb-0 h1"
+      >
+        김경민영구없다</a
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -52,18 +32,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="http://127.0.0.1:5500/vscode-practice/html/index.html"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -74,21 +43,18 @@
             >
               Date
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu ms-auto">
               <li>
                 <a
                   class="dropdown-item"
                   href="http://127.0.0.1:5500/vscode-practice/html/0721-24.html"
-                  >22.07.21~24</a
+                  >07.21-24</a
                 >
               </li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">추가하기</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -104,6 +70,10 @@
     </div>
   </nav>
   <body class="container">
-    <h2>Daily</h2>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
