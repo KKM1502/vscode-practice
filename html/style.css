@@ -1,0 +1,29 @@
+      h1 {
+        border-bottom: 5px solid gray;
+        margin: 0;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 100px;
+        text-align: center;
+      }
+      #grid ol {
+        border-right: 5px solid gray;
+        width: 100px;
+        margin: 0;
+        padding: 30px;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #memo {
+        padding: 28px;
+      }
+      @media (max-width: 800px) {
+        #grid {
+          display: block;
+        }
+        #grid ol {
+          display: none;
+        }
+      }

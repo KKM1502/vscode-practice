@@ -3,7 +3,7 @@ function solution(id_list, report, k) {
   
     // 중복 제거 후, 유저 ID, 유저가 신고한 ID 분리
     let reports = [...new Set(report)].map((value) => value.split(' '))
-    
+    console.log(reports)
   
     // 신고 당한 ID Map
     let reportId = new Map()
@@ -29,3 +29,5 @@ function solution(id_list, report, k) {
   
     return answer
   }
+get
+  
