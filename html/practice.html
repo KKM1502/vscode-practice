@@ -5,22 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB :: CSS</title>
+    <script src="this.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <input
       type="button"
       value="night"
-      onclick="
-      var target =  document.querySelector('body');
-    if(this.value==='night'){
-    target.style.backgroundColor='black';
-    target.style.color='white';
-   this.value='day'} 
-    else{
-      target.style.backgroundColor='white';
-      target.style.color='black' ;
-   this.value='night'}"
+      onclick="nightDayHandler(this)
+      "
     />
     <h1><a href="practice.html"></a> WEB</h1>
     <div id="grid">
