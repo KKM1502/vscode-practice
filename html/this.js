@@ -16,13 +16,12 @@ var Body={
    
 
 function nightDayHandler(self) {
-    var target = document.querySelector("body");
     if (self.value === "night") {
       Body.SetBackgroundColor('black');
       self.value = "day";
       Body.setColor("yellow")
     } else {
-      Body.SetBackgroundColor('white');
+      Body.SetBackgroundColor('yellow');
       self.value = "night";
       Body.setColor("black")
 } }

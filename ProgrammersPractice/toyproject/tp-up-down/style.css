@@ -1,0 +1,17 @@
+h1{
+    font-weight: border;
+    text-align: center;
+    padding-top: 150px;
+    margin: 0px;
+    font-size: 500%;
+    border-bottom: 5px solid black;
+}
+#grid{ 
+    padding-top: 100px;
+    text-align: center;
+}
+@media (max-width: 800px) {
+    h1 {
+        font-size: 350%;
+    }
+  }
