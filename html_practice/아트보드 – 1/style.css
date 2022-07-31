@@ -1,0 +1,105 @@
+* {
+    font-family: "Krub", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+  }
+
+  .intro_bg{
+    background-image:url("intro.png") ;
+    width: 100%;
+    height: 718px;
+  }
+
+  .header{
+    /* flex 는 가로로 묶자 */
+    display: flex; 
+    width: 1280px;
+    margin: auto;
+    height: 86px;
+  }  
+  h1{
+    size: 48px;
+    font-weight:100px;
+  }
+  .contents_1{
+    size: 20px;
+    font-weight:100px;
+  }
+  .result{
+    font-size: 14px;
+  
+  }
+  .searchArea{
+    width: 300px;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-top: 24px;
+
+  }
+
+  .searchArea > form > input{
+    border: none;
+    width: 250px;
+    height: 40px;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    padding-left:10px;
+  }.searchArea > form > span{
+    width: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 86px;
+    width:calc(1280px - 300px);
+
+  }
+  /*네비의 li 태그*/
+  .nav>li{
+    margin-left: 84px;
+
+  }
+  .nav>li>a{
+    color: white;
+  }
+
+  .intro_text{
+    width: 100%;
+    margin: 231px auto 231px auto;
+    text-align: center;
+  }
+  .intro_text > h1 , a{
+    color: white;
+    
+  }
+  .amount{
+    position: relative;
+    top:-66px;
+    display: flex;
+    width: 1280px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    margin: auto;
+  }
+  .amount>li{
+    flex:1;
+    height: 132px;
+  }
+  .amount>li>div{
+  text-align: center;
+  margin-top: 25px;
+  height: 57px;
+font-weight: bold;
+  }
+  .amount > li:not(:last-child){
+    border-right: 1px solid #e1e2e1;
+  }
