@@ -33,5 +33,5 @@ for(let i=0;i<inputnumber.length;i++){
    inputnumber_v.push(inputnumber[i])
 }
 if(inputnumber_v.length===0){alert("try 두근두근")}
-else{
+console.log();
 alert(inputnumber_v.join(","))}}
