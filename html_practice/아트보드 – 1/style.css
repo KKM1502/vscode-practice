@@ -1,3 +1,4 @@
+
 * {
     font-family: "Krub", sans-serif;
     list-style: none;
@@ -10,8 +11,8 @@
   .wrap{
     background-color: rgb(22, 22, 24);
   }
-  .intro_bg{
-    background-image:url("train.webp") ;
+  #intro_bg{
+    background-image:url("car.gif");
     opacity: 1;
     width: 1450px;
     height: 850px;    

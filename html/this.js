@@ -25,3 +25,7 @@ function nightDayHandler(self) {
       self.value = "night";
       Body.setColor("black")
 } }
+let x;
+function BGH(image){
+  document.querySelector(".intro_bg").style
+}

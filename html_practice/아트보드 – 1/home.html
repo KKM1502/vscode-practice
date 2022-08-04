@@ -12,13 +12,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="ScrollTrigger.min.js"></script>
-
+    <script src="bghandler.js"></script>
     <title>Diary</title>
   </head>
   <body>
     <div class="wrap">
-      <div class="intro_bg">
+      <div id="intro_bg">
         <div class="header">
           <div class="searchArea">
             <form>
@@ -32,10 +31,13 @@
             <li><a href="">about</a></li>
             <li><a href="">contact</a></li>
           </ul>
+          
         </div>
         <div class="Page">
           <h1>KyeongMin's Daily</h1>
-          <a>>  >  > </a>
+          <a>>  >  > </a><br>
+          <input type="button" value="Car" onclick="nightDayHandler(this)" 
+        style="width: 100px; height: 30px; text-align: center;margin-left:auto; color: yellow;background: rgb(95, 95, 204);font-weight: bold;border: 2px solid yellow;"/>
         </div>
       </div>
     </div>
@@ -80,7 +82,7 @@
     
         <ul class="icons">
           <li>
-            <div class="icon_img">공부 후 첫 검색</div>
+            <div class="icon_img">Tistory 첫 글 </div>
             <div class="contents_1_bold">BEM</div>
             <div class="contents_1"><div class="texts">Block  블록 - 독립적으로 존재하고 재사용 가능한 요소
               <br>Element 요소 - 블록 내부에 종속되어 실제 기능을 담당하는 것
