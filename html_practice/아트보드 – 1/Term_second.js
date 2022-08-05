@@ -1,7 +1,7 @@
 
 const dDay = document.getElementById("term_second");
 function getTime(){
-  const start = new Date("2022-07-06:00:00:00+0900");
+  const start = new Date("2022-07-18:00:00:00+0900");
   // 현재 날짜
   const today = new Date();
 

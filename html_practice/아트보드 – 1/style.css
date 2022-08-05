@@ -51,13 +51,13 @@
     color: #fbff00;
   
   }
-  .result #current_date{
+  .result #current_date,#current_date_T{
     color:#fbff00;
   }
-  .result #term{
+  .result #term,#term_T{
     color:#fbff00;
   }
-  .result #term_second{
+  .result #term_second,#term_second_T{
     color:#fbff00;
   }
   .searchArea{
@@ -144,6 +144,7 @@
   }
 
   .main_text0{
+ 
     width: 100%;
     height: 601px;
     margin-top: -132px;
@@ -201,6 +202,7 @@
 }
 
 .main_text1{
+
   width: 100%;
   height: 659px;
   background-color: rgb(22, 22, 24);
@@ -212,6 +214,30 @@
 .main_text1 >.contents_1{
   text-align: center;
 }
+.amount_2{
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 1280px;
+  border: 0px;
+  box-shadow: 0px 0px -10px rgba(0,0,0,0.5);
+  margin: auto;
+}
+.amount_2>li{
+  flex:1;
+  background: rgb(0, 0, 0);
+  height: 132px;
+}
+.amount_2>li>div{
+text-align: center;
+margin-top: 25px;
+height: 57px;
+font-weight: bold;
+}
+.amount_2 > li:not(:last-child){
+  margin-right: 10px ;
+}@
+
 .service{
   width: 1280px;
   display: flex;
@@ -257,55 +283,4 @@ footer > div:first-child{
 footer > div:last-child{
   flex:9;
   color: white;
-}
-@keyframes chevronAnimation {
-	0% {
-		transform: translate(0,0) scale(1.0,1.0);
-	}
-	50% {
-		transform: translate(0,5px) scale(0.8,0.8);
-	}
-	100% {
-		transform: translate(0,0) scale(1.0,1.0);
-	}
-}
-
-@media screen and (max-width: 1024px)
-{	
-	body
-	{
-		font-size: 18px;
-		line-height: 27px;
-	}
-}
-
-@media screen and (max-width: 800px)
-{	
-	h1 span
-	{
-		display: block;
-	}
-	
-	div.block
-	{
-		height: 85vh;
-		padding: 15vh 15vw 0 15vw;
-	}
-}
-
-@media screen and (max-width: 420px)
-{	
-	body
-	{
-		font-size: 12px;
-		line-height: 18px;
-	}
-}
-
-@media screen and (max-width: 360px)
-{	
-	h1
-	{
-		font-size: 3em;
-	}
 }
