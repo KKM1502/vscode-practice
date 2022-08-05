@@ -200,7 +200,9 @@
   font-size: 18px;
   margin: auto;
 }
-
+.contents_1 > .texts{
+color: rgb(198, 255, 66);
+}
 .main_text1{
 
   width: 100%;
@@ -236,7 +238,7 @@ font-weight: bold;
 }
 .amount_2 > li:not(:last-child){
   margin-right: 10px ;
-}@
+}
 
 .service{
   width: 1280px;
