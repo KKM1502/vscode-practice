@@ -35,14 +35,19 @@ const userStorage=new UserStorage();
 
 function Login1(self){
 if(self.value==="Login"){
+    
     const id = prompt('enter your id');
     const password = prompt('enter your password');
     userStorage.loginUser(id,password)
     .then(userStorage.getRoles)
     .then(user=>alert(
     `Welcome ${user.name}, you have a ${user.role} role`));
+        if(id==="gyeong112" && password==='test1234'){
+        setTimeout(()=>{self.value="Logout";},2000)}
+        else {
+            self.value="Login"
+        }}
 
-    setTimeout(()=>{self.value="Logout";},2000)}
     else if(self.value==="Logout"){
         alert("Logout...")
         self.value="Login";
