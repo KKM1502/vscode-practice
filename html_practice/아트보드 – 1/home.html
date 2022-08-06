@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Krub&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="bghandler.js"></script>
     <script src="Login.js"></script>
@@ -65,21 +66,19 @@
           <div>
             <div class="contents_1">How long I studied</div>
             <br />
-            <div class="result"><div id="term"><script src="Term.js"></script></div>
-          </div></div>
-        </li>
-        <li>
-          <div>
-            <div class="contents_1">Time is running now...</div>
-            <br />
             <div class="result">
               <div id="term_second">
                 <script src="Term_second.js">
                 </script></div>
           </div>
+        <li>
+          <div>
+            <div class="contents_1">Tistroy Link</div>
+            <br />
+            <div class="more"><a href="https://coding-kyeong.tistory.com/">Link</a></div>
+            
         </li>
       </ul>
-      
 
       <div class="main_text0">
         <h1>Keep Studying</h1>
@@ -102,11 +101,16 @@
             <div class="more"><a href="https://coding-kyeong.tistory.com/1"> Link</a></div>
           </li>
           <li>
-            <div class="icon_img">---</div>
-            <div class="contents_1_bold">---</div>
-            <div class="contents_1"><div class="texts">---
-            </div></div>
-            <div class="more"><a href="https://coding-kyeong.tistory.com/1"> Link</a></div>
+            <div class="icon_img">To do list</div>
+            <div class="contents_1">
+
+                <div id="newtask">
+                <input type="text" placeholder="task to be done..">
+                <button id="push">ADD</button> 
+              </div>
+              <div id="tasks"></div>
+            <!--Script-->
+            <script src="Todo.js"></script>
           </li>
         </ul>
       </div>
@@ -160,7 +164,7 @@
         </div>
         <footer>
           <div>Logo</div>
-          <div>asadfas</div>
+          <div>gyeong112@gmail.com</div>
         </footer>
       </div>
     </div>

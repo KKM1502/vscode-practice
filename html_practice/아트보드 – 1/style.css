@@ -8,6 +8,11 @@
     padding: 0px;
     color: white;
   }
+  a{
+    color: #fbff00;
+    size: 14px;
+    font-weight:100px;
+  }
   .wrap{
     background-color: rgb(22, 22, 24);
   }
@@ -114,11 +119,6 @@
     color: #fbff00;
     
   }
-  a{
-    color: #fbff00;
-    size: 20px;
-    font-weight:100px;
-  }
   .amount{
     position: relative;
     top:-66px;
@@ -185,7 +185,7 @@
   }
 
 .icons .contents_1{
-  width: 300px;
+  width: 350px;
   height: 180px;
   margin: auto;
   letter-spacing: -1px;
@@ -194,12 +194,14 @@
 
 .more{
   width: 100px;
-  line-height: 30px;
+  line-height: 20px;
   background:rgb(128, 96, 34);
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   margin: auto;
+  font-weight: bold;
 }
+
 .contents_1 > .texts{
 color: rgb(198, 255, 66);
 }
@@ -273,6 +275,7 @@ font-weight: bold;
   margin: 16px auto;
 }
 footer{
+  font-size: 8px;
   display: flex;
   background:black;
   padding: 30px;
@@ -280,9 +283,84 @@ footer{
 footer > div:first-child{
   flex:3;
   text-align: center;
-  color: white;
+  color: rgb(167, 150, 150);
 }
 footer > div:last-child{
   flex:9;
-  color: white;
+  color: rgb(167, 150, 150);
+}
+#newtask{
+  margin-top: 5px;
+
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+#newtask input{
+  width: 72.5%;
+  height: 5px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 15px;
+  border: 2px solid rgb(219, 219, 93);
+  padding: 12px;
+  color: rgb(219, 219, 93);
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  background-color: black;
+}
+#newtask input:focus{
+  outline: none;
+  border-color: rgb(219, 219, 93);
+}
+#newtask button{
+  float: right;
+  width: 18.1%;
+  height: 33px;
+  border-radius: 5px;
+  font-family:'Popins',sans serif;
+  font-weight: bold;
+  font-size: 13px;
+  background-color:  rgb(219, 219, 93);
+  color:black;
+  cursor: pointer;
+}
+#tasks{
+  padding-top: 2px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  width: 350px;
+  color: yellow;
+}
+.task{
+  height: 20px;
+  padding: 3px 4px;
+  margin-top: 10px;
+  font-size:13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px;
+  cursor: pointer;
+  color: rgb(219, 219, 93);
+}
+#taskname{
+  color: rgb(219, 219, 93);
+}
+.task span{
+  font-family: 'Popins', sans-serif;
+  font-size:13px;
+  font-weight: 400;
+}
+.task button{
+  background-color: black;
+  color: black;
+  height: 100%;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.completed{
+  text-decoration: line-through;
+
 }
