@@ -208,7 +208,7 @@ color: rgb(198, 255, 66);
 .main_text1{
 
   width: 100%;
-  height: 659px;
+  height: 900px;
   background-color: rgb(22, 22, 24);
 }
 .main_text1 > h1{
@@ -250,21 +250,28 @@ font-weight: bold;
 
 }
 .main_text2{
-  width: 100%;
-  height: 418px;
-  background-image: url("master.png");
+  width: 1450px;
+  height: 500px;
+  margin: auto;
 }
-.main_text2> ul{
+.main_text2> .amount2{
   display: flex;
-  padding-top:138px;
+  width: 1450px;
+  height: 450px;
+  margin:auto;
+  background: black;
 }
-.main_text2> ul>li{
+.main_text2> .amount2 li{
   flex: 1;
   text-align: center;
 }
+.main_text2> .amount2 .amount_pic{
+
+  background-image: url("score1.gif");
+}
 .main_text2>ul>li>h1,
 .main_text2>ul>li>div{
-  color: white;
+  color:yellow;
 }
 .more2{
   width: 220px;
@@ -343,7 +350,7 @@ footer > div:last-child{
   color: rgb(219, 219, 93);
 }
 #taskname{
-  color: rgb(219, 219, 93);
+  color: rgb(198, 255, 66);
 }
 .task span{
   font-family: 'Popins', sans-serif;
@@ -362,5 +369,4 @@ footer > div:last-child{
 }
 .completed{
   text-decoration: line-through;
-
 }
