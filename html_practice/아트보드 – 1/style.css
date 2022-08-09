@@ -6,7 +6,7 @@
     border-collapse: collapse;
     margin: 0px;
     padding: 0px;
-    color: white;
+    color: #aeaf6c;
   }
   a{
     color: #fbff00;
@@ -265,37 +265,21 @@ font-weight: bold;
   flex: 1;
   text-align: center;
 }
-.main_text2> .amount2 .amount_pic{
+.main_text2> .amount2 >#amount_pic{
 
   background-image: url("score1.gif");
 }
-.main_text2>ul>li>h1,
-.main_text2>ul>li>div{
-  color:yellow;
+
+.main_text2> .amount2 .Score{
+width: 600px;
+height: 350px;
+margin: auto;
 }
-.more2{
-  width: 220px;
-  height: 40px;
-  border: 1px solid white;
-  line-height: 40px;
-  cursor: pointer;
-  margin: 16px auto;
-}
-footer{
-  font-size: 8px;
-  display: flex;
-  background:black;
-  padding: 30px;
-}
-footer > div:first-child{
-  flex:3;
-  text-align: center;
-  color: rgb(167, 150, 150);
-}
-footer > div:last-child{
-  flex:9;
-  color: rgb(167, 150, 150);
-}
+
+.main_text2> .amount2 >.Score> #newtask_s{
+  color: #fbff00;
+  }
+  
 #newtask{
   margin-top: 5px;
 
@@ -303,6 +287,19 @@ footer > div:last-child{
   box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 #newtask input{
+  width: 72.5%;
+  height: 5px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 15px;
+  border: 2px solid rgb(219, 219, 93);
+  padding: 12px;
+  color: rgb(219, 219, 93);
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+  background-color: black;
+}
+#newtask_s input{
   width: 72.5%;
   height: 5px;
   font-family: 'Poppins',sans-serif;
@@ -331,8 +328,27 @@ footer > div:last-child{
   color:black;
   cursor: pointer;
 }
+#newtask_s button{
+  float: right;
+  width: 18.1%;
+  height: 33px;
+  border-radius: 5px;
+  font-family:'Popins',sans serif;
+  font-weight: bold;
+  font-size: 13px;
+  background-color:  rgb(219, 219, 93);
+  color:black;
+  cursor: pointer;
+}
 #tasks{
   padding-top: 2px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  width: 350px;
+  color: yellow;
+}
+#tasks_s{
+  margin: auto;
+  padding-top: 10px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.3);
   width: 350px;
   color: yellow;
@@ -349,7 +365,18 @@ footer > div:last-child{
   cursor: pointer;
   color: rgb(219, 219, 93);
 }
+.task_s{
+  height: 300px;
+  margin-top: 10px;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(219, 219, 93);
+}
 #taskname{
+  color: rgb(198, 255, 66);
+}
+#taskname_s{
+  font-size:20px;
   color: rgb(198, 255, 66);
 }
 .task span{
@@ -367,6 +394,34 @@ footer > div:last-child{
   cursor: pointer;
   outline: none;
 }
+.task_s button{
+  background-color: black;
+  color: black;
+  height: 100%;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 .completed{
   text-decoration: line-through;
+}
+
+footer{
+  
+  font-size: 9px;
+  background:black;
+  padding: 30px;
+}
+.footer1{
+  display: flex;
+  width: 1250px;
+  margin: auto;
+}
+footer >.footer1> .Logo{
+  flex: 3;
+}
+footer >.footer1> .Email{
+  flex: 9;
 }

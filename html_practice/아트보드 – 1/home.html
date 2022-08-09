@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="bghandler.js"></script>
     <script src="Login.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>Diary</title>
   </head>
   <body>
@@ -154,16 +155,35 @@
         </ul>
         <div class="main_text2">
           <ul class="amount2">
-            <li class="amount_pic">
+            <li id="amount_pic">
             </li>
             <li>
               <h1>Today's Score</h1>
+              <div class="Score">
+                <div id="newtask_s">
+                  <input type="text" placeholder="Today's Score">
+                  <button id="push_s">ADD</button> 
+                </div>
+                <div id="tasks_s"></div>
+              </div><!--Script-->
+             <script src="Score.js"></script>
+
+             <script> 
+             $("#push_s").click(function(){
+               $("#taskname_s").animate( {
+                  fontSize:"200px"
+                },
+               2000
+             );});</script>
             </li>
           </ul>
         </div>
         <footer>
-          <div>Logo</div>
-          <div>gyeong112@gmail.com</div>
+          <div class="footer1">
+          <div class="Logo">Logo</div>
+          
+          <div class="Email">gyeong112@gmail.com</div>
+            </div>
         </footer>
       </div>
     </div>
