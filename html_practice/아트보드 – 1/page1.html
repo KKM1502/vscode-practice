@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <script src="bghandler.js"></script>
+    <script src="Login.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="warning.js"></script>
+    <title>Diary</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="intro_bg">
+        <div class="header">
+          <div class="searchArea">
+            <form>
+              <input type="search" placeholder="search" />
+              <span>검색</span>
+            </form>
+          </div>
+          <ul class="nav">
+            <li><a href="home.html">home</a></li>
+            <li><a href="page1.html">PAGE1</a></li>
+            <li><a href="">about</a></li>
+            <li><input type="button" value="Login" onclick="Login1(this)" 
+              style="font-weight: bold; cursor: pointer;width: 100px; height: 30px; text-align: center;margin-left:auto; color: yellow;background: rgb(95, 95, 204);font-weight: bold;border: 2px solid yellow;"/></li>
+          </ul>
+          
+        </div>
+        <div class="Page">
+          <h1>KyeongMin's Daily</h1>
+          <a>>  >  > </a><br>
+          <input type="button" value="Car" onclick="Bghandler(this)" 
+        style="cursor: pointer;width: 100px; height: 30px; text-align: center;margin-left:auto; color: yellow;background: rgb(95, 95, 204);font-weight: bold;border: 2px solid yellow;"/>
+        </div>
+      </div>
+    </div>
+    <div class="wrap2">
+      <div class="main_page1">
+          <ul class="diary">
+            <div class="p1_title">날짜</div>
+            <div >
+              <input type="text" id="p1_contents" >
+              <ul class="input">
+                <li class="li1">좋은 하루 보내세요~</li>
+                <li class="li2"><input type="button" value="Add" onclick="Warning()"
+                   style="width: 347.19px; height:40px; color: black;font-size: 25px;"></li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+        <footer>
+          <div class="footer1">
+          <div class="Logo">Logo</div>
+          
+          <div class="Email">gyeong112@gmail.com</div>
+            </div>
+        </footer>
+    </div>
+
+  </body>
+  
+</html>
+

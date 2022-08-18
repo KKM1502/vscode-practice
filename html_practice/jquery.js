@@ -1,4 +1,3 @@
-
 $("#go").click(function () {
   $("#block").animate(
     {   

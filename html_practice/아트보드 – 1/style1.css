@@ -1,0 +1,172 @@
+
+* {
+    font-family: "Krub", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #aeaf6c;
+  }
+  a{
+    color: #fbff00;
+    size: 14px;
+    font-weight:100px;
+  }
+  .wrap{
+    background-color: rgb(22, 22, 24);
+  }
+  .wrap2{
+    background-color: rgb(22, 22, 24);
+  }
+  #intro_bg{
+    background-image:url("car.gif");
+    opacity: 1;
+    width: 1450px;
+    height: 850px;    
+    margin: auto;          
+  }
+
+  .header{
+    /* flex 는 가로로 묶자 */
+    display: flex; 
+    width: 1280px;
+    margin: auto;
+    height: 86px;
+  }  
+  h1{
+    color: #fbff00;
+    size: 48px;
+    font-weight:100px;
+  }
+  .contents_1{
+    color: #fbff00;
+    size: 20px;
+    font-weight:100px;
+  }
+  .contents_2{
+    color: #fbff00;
+    size: 30px;
+    font-weight:100px;
+  }
+  .contents_1_bold{
+    color: #fbff00;
+    size: 18px;
+    font-weight:bold;
+  }
+
+  .searchArea{
+    width: 300px;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-top: 24px;
+
+  }
+  .searchArea > form{
+    border: 1px solid #fbff00;
+  }
+  .searchArea > form > input{
+    border: none;
+    width: 250px;
+    height: 40px;
+    background: rgba(0,0,0,0);
+    color: #fbff00;
+    padding-left:10px;
+
+    
+  }.searchArea > form > span{
+    width: 50px;
+    color: #fbff00;
+  
+    cursor: pointer;
+   
+
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 86px;
+    width:calc(1280px - 300px);
+
+  }
+  /*네비의 li 태그*/
+  .nav>li{
+    margin-left: 84px;
+
+  }
+  .nav>li>a{
+    color: #fbff00;
+  }
+
+  .Page{
+    width: 100%;
+    margin: 50px auto 231px auto;
+    text-align: center;
+    
+
+  }
+  .Page > h1{
+    color: #fbff00;
+    
+  }
+ 
+.main_page1{
+  padding-top: 30px;
+  width: 1450px;
+  height: 1000px;
+  margin: auto;
+}
+.main_page1 > .diary {
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  border: 5px solid #aeaf6c;
+
+}
+.p1_title{
+  width: 100%;
+  height: 50px;
+  font-size: 40px;
+  border-bottom: 5px solid #aeaf6c;
+  
+}
+#p1_contents{
+  width: 100%;
+  height: 850px;
+  background-color: #aeaf6c;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+.input{
+ width: 100%;
+ height: 40px;
+ display: flex;
+}
+.input > .li1{
+  flex: 9;
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+}.input > .li2{
+  flex: 3;
+  border-left: solid #aeaf6c;
+}
+footer{
+  
+  font-size: 9px;
+  background:black;
+  padding: 30px;
+}
+.footer1{
+  display: flex;
+  width: 1250px;
+  margin: auto;
+}
+footer >.footer1> .Logo{
+  flex: 3;
+}
+footer >.footer1> .Email{
+  flex: 9;
+}

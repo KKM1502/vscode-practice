@@ -16,6 +16,9 @@
   .wrap{
     background-color: rgb(22, 22, 24);
   }
+  .wrap2{
+    background-color: rgb(22, 22, 24);
+  }
   #intro_bg{
     background-image:url("car.gif");
     opacity: 1;
@@ -113,6 +116,7 @@
     width: 100%;
     margin: 50px auto 231px auto;
     text-align: center;
+    
 
   }
   .Page > h1{
