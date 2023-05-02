@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            태그의 수평 정렬
+                - 인라인 태그와 블럭 태그의 수평 정렬
+            
+            수평 정렬(내용물의 정렬)    
+            -text align
+            1. 인라인 태그
+                - 불가능 > 여백(공백)이 없어서...
+
+            2. 블럭 태그    
+                - 가능 > 여백(공백)이 있어서... 
+            3. text-align 은 블럭 태그에서만 사용 가능하다.
+            
+            수평 정렬(태그 스스로 정렬) > 불가능(지원하는 속성이 없다.)
+            1. 인라인 태그
+                - 가능 > 부모(블럭) 태그의 text-align을 사용해서 정렬
+            
+            2. 블럭 태그
+                - 불가능 > 부모 영역과 자식 영역이 일치하기 때문에 좌우에 공간이 없다.
+                - 가능 > 
+        
+        */
+        #span1, #div1{
+            background-color: yellow;
+        }
+        #span1{
+            text-align: center;
+        }
+        #div1{
+            /* text-align: center; */
+            width: 200px;
+            margin: auto;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>인라인태그</h1>
+
+    <div style="background-color: aquamarine; padding: 10px; text-align: center;">
+    <span id="span1">인라인태그</span>
+    </div>
+    <h1>블럭태그</h1>
+
+    <div style="background-color: aquamarine; padding: 10px; text-align: center;">
+        <div id="div1">블럭태그</div>
+    </div>
+    
+</body>
+</html>

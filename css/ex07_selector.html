@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            인접 형제 선택자, Adjacent Sibling Selector
+                - 선택자 + 선택자
+                - 정밀도가 좋음
+                - 범위가 좁음
+
+            형제 선택자, Sibling Selector
+                - 선택자 ~ 선택자
+                - 정밀도 낮음 + 범위 높음
+        */
+
+        p + span{color: red;}
+        div + span{color: blue;} /*바로 위에 div가 있어야 적용*/
+        
+        div ~ span{color : orange;} /*위에 div가 있기만 하면 적용*/
+
+    </style>
+</head>
+<body>
+    
+    <p>p tag</p>
+    <p>p tag</p>
+    <p>p tag</p>
+    <span>span tag</span>
+
+    <div>div tag</div>
+
+    <p>p tag</p>
+    <span>span tag</span>
+    <p>p tag</p>
+
+    <div>div tag</div>
+    <div>div tag</div>
+    <span>span tag</span>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height:150px;
+        }
+        #box1{ background-color: tomato;
+                border: 10px solid black;}
+        #box2{ background-color: gold;}
+        #box3{ 
+            /* 사이즈 측정:display:
+            1. content-box: 상자의 실제 크기 = width(height)+패딩 + 테두리
+            2. border-box: 상자의 실제 크기 = width(height) */
+
+
+            background-color: cornflowerblue;
+            box-sizing: border-box;
+            border: 10px solid;
+            padding: 10px;}
+        
+
+        
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+</body>
+</html>

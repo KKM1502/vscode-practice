@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*
+        충돌
+        - 선택자 충돌
+        - 동일한 태그를 서로 다른 선택자가 동시에 선택했을 때
+
+        선택자 우선 순위
+        - 충돌이 발생하면 우선순위가 가장 높은 선택자가 적용
+        - 점수 계산
+
+        선택자 점수 계산
+        1. 태그 선택자      > 1점   > "사람"       
+        2. 클래스 선택자    > 10점  > "남자"   ---덜 구체적
+        3. 아이디 선택자    > 100점 > "홍길동" ===구체적
+         
+        */
+
+
+        /* 선택적 충돌 */
+        /* div{
+            color: red;
+        }
+        div{
+            font-style: italic;
+        } */
+        /* 선택자 + 속성 충돌 */
+        /* div{color: red;}
+        div{color: yellow;} */
+
+        /* div{color: red;}
+        .box{color: yellow;}
+        #box1{color: aqua;} */
+
+/*         
+        body > div{color: blue;} 
+        div{color: red;}          */
+        
+        div >div >div >div >div >div >div >div >div >div >div >div >div >div >div >div >div >div {color: blue;}
+        .box2{
+            color: red;
+        }
+
+        /* #box1{
+            color: blue;
+        } */
+        .one{
+            color: yellow !important;   
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <div>
+                                                                    <div>
+                                                                        <div class="box2">상자</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            border: 11px solid black;
+            width: 200px;
+            height: 200px;
+            border-color: gold;
+            margin: 100px;
+        transition-property: all;
+        transition-duration: 10s;
+        background-color: black;
+        }
+        #box1:hover{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            font-size: 10rem;
+        }
+        #cat img{
+            transition: 100s all;
+        }
+        #cat img:hover{
+            transform: translate(0px,-15px) rotate(333360deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">상자</div>
+    <h1>고양이</h1>
+    <div id="cat">
+        <img src="images/catty01.png" alt="">
+        <img src="images/catty02.png" alt="">
+        <img src="images/catty03.png" alt="">
+        <img src="images/catty04.png" alt="">
+        <img src="images/catty05.png" alt="">
+    </div>
+</body>
+</html>

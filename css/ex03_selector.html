@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            color:green;
+        } */
+        h2{
+            color:blue;
+        }
+        p{
+            color : gray;
+        }
+        li{
+            color: darkorchid;
+        }
+        h2#title{
+            color:red;
+        }
+        li{
+            color: red;
+        }
+        li.item{
+            color: darkblue;
+        }
+
+        h1,h2{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+
+        CSS Grammer
+
+        선택자 { 속성: 값; }
+        1. 선택자: 문서 내에서 원하는 태그를 검색
+        2. 속성 : 서식 종류 
+        3. 값 : 서식 값
+
+        CSS 선택자, CSS selector
+        - HTML 문서 내에서 서식을 적용하려는 대상 태그를 검색하는 도구 
+        
+        1. 전체 선택자
+        - 모든 태그를 선택한다.
+        - 모든 태그에 동일한 서식을 적용할 때 사용
+
+        2. 태그 선택자
+        - 태그명을 가지고 원하는 태그를 선택한다.
+        - 검색된 모든 태그를 일괄 적용   >   생산성!
+        - 사용 쉬움
+        - 단점 > 같은 태그를 일괄 적용
+
+        3. ID 선택자
+        - 태그에 명시된 id 속성을 검색해서 태그를 선택
+        - 태그명#ID
+        - 원하는 태그를 직접 선택할 수 있다.
+        - 일괄 적용이 안된다.
+        - DB에서 PK와 같은 것
+
+        4. Class 선택자
+        - 태그에 명시된 class 속성을 검색해서 태그를 선택
+        - 태그명.Class
+        - 일괄 적용이 도니다. > class 그룹을 묶기 위한 식별자라서
+
+
+            1. 전체선택자
+            ----------------------
+            2. 태그 선택자
+            3. ID 선택자
+            4. Class 선택자
+            ----------------------
+            5. 나머지 > 2~4 를 조합
+\   
+
+     -->
+     <h1>수업 일지</h1>
+
+     <p>오늘은 HTML수업을 합니다.</p>
+     <p>내일은 HTML수업이 끝나면 CSS수업으로 넘어갑니다.</p>
+
+     <h2 id="title">수업 내용</h2>
+
+     <ol>  
+        <li class="item">문단 태그</li>
+        <li class="item">목록 태그 </li>
+        <li class="item">테이블 태그</li>
+        <li class="item">이미지 태그</li>
+        <li class="item">링크 태그</li>
+     </ol>
+
+     <h2>복습할 내용</h2>
+     <ul>
+        <li>테이블 셀 병합하기</li>
+        <li>이미지 사이즈 변경하기</li>
+        <li>내부 링크 새엉하기</li>
+     </ul>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        
+        display
+        - 요소의 출력 방식
+
+        1.none
+        2.inline
+        3.block
+        4.inline-block
+        
+
+        */
+        .box{
+            border: 1px solid black;
+            display: inline;
+        }
+        .link{
+            border: 1px solid black;
+            display: block;
+            width: 200px;
+            height: 100px;
+            /*display: block 일때만 width, height 설정 가능*/
+        }
+
+        #menu{
+            /* border:3px solid red; */
+            padding-left: 0px;
+            
+        }
+        #menu li{
+            border:3px solid blue;
+            display: inline-block; /*인라인 태그처럼 출력 + 너비/높이 지정 가능*/
+            width:calc(20% - 16px);
+            text-align: center;
+           padding: 5px;    
+           cursor: pointer;
+        }
+        #menu li:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- 메뉴 만들기 -->
+    <div>    
+        <ul id="menu">
+            <li>메뉴</li><li>메뉴</li><li>메뉴</li><li>메뉴</li><li>메뉴</li>
+        </ul>
+    </div>
+
+
+    <h1>블럭 태그</h1> 
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+    <h1>인라인 태그</h1>
+    <a href="#" id="link1" class="link">링크1</a>
+    <a href="#" id="link2" class="link">링크2</a>
+    <a href="#" id="link3" class="link">링크3</a>
+
+
+</body>
+</html>

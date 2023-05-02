@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            transform, 변형
+            - 위치, 크기, 회전, 왜곡 등 
+
+            1. transform: translate() > 위치 변형(이동)
+            2. transform: scale() > 크기. 배율 변형(확대/축소)
+            3. transform : roatate() > 회전 변형
+            4. transform : skew() >  왜곡 변형
+            5. transform :   matrix() > 
+        
+        */
+        .box{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+        }
+        #box1{
+            background-color: red;
+            /* transform:translate(10px,10px);
+            transform: scale(1,2); */
+            transform:rotate(45deg);
+            
+        }
+        #cat > img:hover{
+            /* transform: rotate(120deg) scale(1.4,1.4) translate(0px,-50px); */
+            /* 변형 > 기준점(원점)*/
+            transform-origin: center center;
+            
+        }
+        #box3:hover{
+            transform-origin: 0%,0%;
+            transform: rotate(45deg);
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+
+    <hr>
+
+    <h1>고양이</h1> 
+    <div id="cat">
+        <img src="images/catty01.png" alt="">
+        <img src="images/catty02.png" alt="">
+        <img src="images/catty03.png" alt="">
+        <img src="images/catty04.png" alt="">
+        <img src="images/catty05.png" alt="">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list input[type=text]{
+            display: block;
+            border:1px solid #555;
+            padding:  3px;
+            margin-bottom: 3px;
+            background-color: white;
+            color: #444;
+            outline: none;
+        }
+        /* .list input[type=text]:required{ background-color: blueviolet;} */
+        /* .list input[type=text]:optional{ background-color: red;} */
+    
+        .list input[type=text]:disabled{background-color: black;}
+        input[type=checkboox]:checked{
+            opacity: 1;
+        }
+
+        .cb-cat + .cat{
+            visibility: hidden;
+
+        }
+        .cb-cat:checked + .cat{
+            visibility: visible;
+
+        }
+        .cb1 + div{
+            display: none;
+        }
+        .cb1:checked + div{
+            display: block;
+        }
+        .item{
+            border: 1px solid #555;
+            width: 200px;
+        }
+        .item #cb2{
+            display:none;
+            
+        }
+        .item label{
+            font-size: 1.5rem;
+            font-family: Arial;
+            font-variant: small-caps;
+            display: block;
+            padding: 10px;
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+        .item div{
+            padding: 12px;
+            border-top: 1px solid #555;
+            display: none;
+        }
+        .item .cb2:checked +label{
+            background-color: gray;
+        }
+        .item .cb2:checked +label + div{
+            display: block;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="item">
+        <input type="checkbox" class="cb2" id="cb2">
+        <label for="cb2">Html</label>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, doloribus rerum atque amet sunt delectus corporis quas consectetur provident aut minus quis harum quasi impedit? Error magni doloribus totam dolorem?</div>
+    </div>
+
+
+    <hr>
+    제목 <input type="checkbox" class="cb1">
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate sint molestias magni aliquam, doloremque rem exercitationem sapiente consequuntur repudiandae perspiciatis vero libero quam aspernatur! Perferendis quaerat dolorem debitis! Necessitatibus, beatae!</div>
+
+    <details>
+        <summary>제목</summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt adipisci a officia, placeat odit porro nobis molestiae earum possimus eveniet voluptatem fugit mollitia nostrum. Sapiente in officia similique ipsum.
+    </details>
+
+
+    <div>
+        <input type="checkbox" class="cb-cat">
+        <img src="images/catty01.png" alt="cat" class="cat">
+    </div>
+
+
+    <div class="list">
+        <input type="text" value="1" required>
+        <input type="text" value="2" readonly>
+        <input type="text" value="3" disabled>
+        <input type="text" value="4">
+        <input type="text" value="5" disabled>
+        <input type="text" value="6" readonly>
+        <input type="text" value="7" required>
+        <input type="text" value="8" readonly>
+        <input type="text" value="9">
+        <input type="text" value="10" readonly>
+
+
+        <input type="checkbox">
+    </div>
+</body>
+</html>

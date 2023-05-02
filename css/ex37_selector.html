@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+
+            CSS 선택자(가상 클래스)
+            1. :first-child
+                -가상 클래스
+                -검색된 태그 자체를 조작
+            2. ::before
+                -가상 요소(Element)
+                -검색된 태그 주변을 조작
+
+            전후 선택자
+            1. ::before  = :before
+            2. ::after   = :after    
+        
+        
+        */
+/* 
+        span{
+            color: blue;
+        }
+        span::before{
+            content:'홍길동' ;
+            color: orange;
+            font-size: 1.5rem;
+        }
+        span::after{
+            content:'아무갠' ;
+            color: orange;
+            font-size: 1.5rem;
+        } */
+
+        /* #list div{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            font-size: 1rem;
+
+        }
+        #list {
+            font-size: 0px;
+        } */
+
+        #list .item{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        #list::after{
+            content: '';
+            display: block;
+            clear: left;
+        }
+        #list div:nth-child(1){background-color: tomato;}
+        #list div:nth-child(2){background-color:teal ;}
+        #list div:nth-child(3){background-color: tan;}
+        #list div:nth-child(4){background-color: thistle;}
+        #list div:nth-child(5){background-color:turquoise ;}
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, culpa error. Consectetur, dolores odit. Beatae ipsam <span>perspiciatis</span> reprehenderit corporis ea, <span>>cupiditate</span> dolor ipsum facere qui, sunt, <span>asperiores</span> ipsa voluptate fugit!</p>
+    <hr>
+    <div id="list">
+        <div class="item">RED</div>
+        <div class="item">Yellow</div>
+        <div class="item">Blue</div>
+        <div class="item">Purple</div>
+        <div class="item">Green</div>
+        
+    </div>
+    <div>Others</div>
+</body>
+</html>

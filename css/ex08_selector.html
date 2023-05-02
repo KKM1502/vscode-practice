@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            10. 의사 클래스, Pseudo Class
+            - 실제 태그에 class 속성에 명시되어 있지 않ㅇ느데
+            선택자에서 진짜 존재하는 클래스처럼 사용
+            -<a> 태그만 지원 > 모든 태그 확장 + 종류 증가
+
+
+        */
+                a{color: orange;
+                text-decoration: none;}
+
+                /* 브라우저가 한번도 방문하지 않은 상태 */
+                a:link{color: red;}
+                /* 한번이라도 방몬 */
+                a:visited{color:blue;}
+                /*  */
+                a:active{color:green;}
+                /* 마우스를 갖다 댈때 */
+                a:hover{color:black;
+                text-decoration: underline;}
+
+    </style>
+</head>
+<body>
+    <h1>링크</h1>
+    <a href="https://naver.com">네이버로 이동합니다</a>
+
+</body>
+</html>

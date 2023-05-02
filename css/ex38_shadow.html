@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*
+        그림자, shadow
+        1. text-shadow: x y blur color;
+        2. box-shadow: x y blur color;
+    */
+    div:nth-child(1){
+        text-shadow: 2px 2px 2px #999;
+    }
+    div:nth-child(2){
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        
+    }
+    div:nth-child(2):hover{
+        box-shadow: 5px 5px 2px gray;
+    }
+    </style>
+</head>
+<body>
+    <div class="item">RED</div>
+    <div class="item">Yellow</div>
+    <div class="item">Blue</div>
+
+
+</body>
+</html>

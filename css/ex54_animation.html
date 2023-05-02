@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+
+        body{
+            /* border: 10px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            background-color: black;
+            overflow: hidden;
+        }
+        .material-symbols-outlined{
+            font-size: 3rem;
+            font-weight: bold;
+
+            transform: scale(150,150);
+            opacity: 0;
+            animation-name: key-logo;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;    
+        }
+
+        @keyframes key-logo{
+            0%{transform:scale(150,150);opacity: 0;}
+            100%{transform:scale(1,1);opacity: 1;}
+        }
+
+        .material-symbols-outlined:nth-child(1){
+            color: red;
+            animation-delay: 0s;
+        }
+        .material-symbols-outlined:nth-child(2){
+            color: gold;
+            animation-delay: 0.6s;
+        }
+        .material-symbols-outlined:nth-child(3){
+            color: blue;
+            animation-delay: 1.2s;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <span class="material-symbols-outlined">
+support_agent
+</span>
+<span class="material-symbols-outlined">
+    forest
+    </span>
+    <span class="material-symbols-outlined">
+        cruelty_free
+        </span>
+</body>
+</html>

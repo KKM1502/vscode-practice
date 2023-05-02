@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 10px solid black;
+        }
+        #botx .item{
+            font-size: 2rem;
+        }
+
+        #box .item:nth-child(1){background-color:tomato ;}
+        #box .item:nth-child(2){background-color:gold ;}
+        #box .item:nth-child(3){background-color:cornflowerblue;}
+        #box .item:nth-child(4){background-color:orange;}
+        #box .item:nth-child(5){background-color:green;}
+
+        #box{
+            /* 
+                display: flex;
+                - flex box, flexiable box
+                - 레이아웃 구성 > 내부 요소의 배치
+                - float / position / margin
+            */
+            display: flex;
+        }
+        /* #box .item{
+            float: left;
+        }
+        #box::after{
+            content: '';
+            display: block;
+            clear: left;
+        }
+    </style> */
+</head>
+<body>
+    <div id="box">
+        <div class="item">딸기</div>
+        <div class="item">바나나</div>
+        <div class="item">포도</div>
+        <div class="item">파인애플</div>
+        <div class="item">귤</div>
+    </div>
+</body>
+</html>
