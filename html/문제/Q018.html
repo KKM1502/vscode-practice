@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 520px;
+            height: 520px;
+            border: 20px dashed gray;
+            
+            
+        }
+        .hour, .minute, .second{
+            border-radius: 50px;
+            border: 10px solid #555;
+            width: 30px;
+            left: 280px;
+            display: flex;
+            position: absolute;
+            font-size: 10px;
+            text-align: center;
+            padding-top: 5px;
+            font-weight: bold;
+            color: white;
+        }
+        .hour{
+            height: 100px;
+            background-color: tomato;
+            top: 140px;
+            transform-origin: center bottom ;
+            transition: all 200s;
+            transition-timing-function: linear;
+
+        }
+        .minute{
+            height: 150px;
+            top: 90px;
+            background-color: cornflowerblue;
+            transform-origin: center bottom ;
+            transition: all 400s;
+            transition-timing-function: linear;
+        }
+        .second{
+            height: 200px;
+            top: 40px;
+            background-color: gold;
+            transform-origin: center bottom ;
+            transition: all 600s;
+            transition-timing-function: linear;
+        }
+        .wrap:hover .hour{
+            
+            transform: rotate(360deg);
+  
+           
+        }
+        .wrap:hover .minute{
+            
+            transform: rotate(21600deg);
+
+           
+        }
+        .wrap:hover .second{
+            
+            transform: rotate(1296000deg);
+
+           
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="hour">Hour</div>
+        <div class="minute">Min</div>
+        <div class="second">Sec</div>
+    </div>
+
+</body>
+</html>

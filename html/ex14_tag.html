@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+        인라인 태그 vs 블럭 태그
+        - 모든 태그는 위의 두 분류 중 하나에 속한다.
+        - 렌더링(Rendering, 태그를 화면에 출력하는 작업) 규칙이 서로 다르다.
+        
+        인라인 태그, Inline Tag
+        - 자신의 내용물과 앞뒤의 다른 태그의 내용물을 같은 라인에 출력한다.
+        - 이유: 내용물의 크기가 곧 태그의 영역이다.
+        - PCDATA(텍스트)는 인라인 태그로 취급한다.
+
+        블럭 태그, Block Tag
+        - 자신의 내용물과 앞뒤의 다른 태그의 내용물을 다른 라인에 출력한다.
+        - 이유: 내용물의 크기와 상관없이 한 라인을 독점한다. 높이는 내용물의 크기와 동일하다 .
+        
+        블럭태그 : <p>, <h1>..<h6>, <blockquote>, <ol>, <ul>, <dl>, <hr>
+        인라인태그 : 스타일태그 <a>, <img>
+
+    -->
+
+
+     <!-- 빈 링크 -->
+    <a href="#">링크1</a>
+    <a href="#" style="background-color: yellow;">링크2</a>
+    <a href="#">링크3</a>
+
+
+    <!-- 블럭 태그 -->
+    <p>문단1</p>
+    <p style="background-color: yellow;">문단1</p>
+    <p>문단1</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        html 4.01 + xHtml
+        html5
+
+     -->
+     <h1>HTML5</h1>
+
+     <form method="post" action="ex20.jsp">
+
+        <input type="submit" value="내보내기">
+        <hr> 어쩌구 저쩌구
+        <label for="txt1">이름: </label><input type="text" id="txt1"> 
+        <hr>
+        <input type="text" value="이름을 입력해주세요."
+        onclick="this.value='';">
+        <input type="password" value="암호를 입력해주세요."
+        onclick="this.value='';">
+
+        <hr>
+        <input type="text" placeholder="이름을 입력해주세요.">
+        <input type="password" placeholder="암호를 입력해주세요.">
+
+        <hr>
+        <input type="text" placeholder="아이디를 입력해주세요." required value="hong"> **필수입력
+
+        <hr>
+        이메일: <input type="email">
+        <hr>
+        URL: <input type="url">
+        <hr>
+        전화: <input type="tel">
+        <hr>
+        나이: <input type="number" min="0" max="100" step="10">
+        <hr>
+        범위: <input type="range" onchange="document.getElementById('txt2').value=this.value;" min="50" max="500" step="500">
+        <hr>
+        색상: <input type="color" onchange="document.getElementById('txt3').value=this.value; document.body.bgColor=this.value;">
+        <input type="text  " id="txt3" size="10">
+        <hr>
+        날짜시간:
+        <input type="date">
+        <hr>
+        <input type="month">
+        <hr>
+        <input type="week">
+        <hr>
+        <input type="time">
+        <hr>
+        <input type="datetime-local">
+        <hr>
+        <input type="datetime">
+        <hr>
+        데이터리스트:
+        <input type="text" list="list1">
+        <datalist id="list1">
+            <option value="홍길동"></option>
+            <option value="호순신"></option>
+            <option value="암윭걔"></option>
+        </datalist>
+
+        <hr>
+
+        진행률:
+        <br>
+        <progress></progress>
+        <br>
+        <progress value="0"></progress>
+        <br>
+        <progress value="0.2"></progress>
+        <br>
+        <progress value="0.4"></progress>
+        <br>
+        <progress value="0.6"></progress>
+        <br>
+        <progress value="0.8"></progress>
+        <br>
+        <progress value="1"></progress>
+        <br>
+        <progress max="100" value="76"></progress>
+        <hr>
+
+        수치:
+        <br>
+        <meter value="0"></meter>
+        <br>
+        <meter value="0.5"></meter>
+        <br>
+        <meter value="12" min="0" max="100"></meter>
+        <br>
+        <meter min="0" max="100" value="16" low="30" high="80"></meter>
+        <br>
+        <meter min="0" max="100" value="70" low="30" high="80"></meter>
+        <br>
+        <meter min="0" max="100" value="90" low="30" high="80"></meter>
+        <hr>
+        <details>
+            <summary>java? </summary>
+            <p>자바는 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구</p>
+        </details>
+    
+    </form>
+</body>
+</html>

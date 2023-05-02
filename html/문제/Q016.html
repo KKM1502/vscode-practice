@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .line1 , .line2, .line3, .line4{
+            width: 500px;
+            height: 60px;
+            display: flex;
+        
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        .line1 > div >img{
+            width: 50px;
+            height: 50px;
+            transform: translate(-50px);
+        }
+
+        .line2 > div > img{
+            opacity: 0;
+        }
+        .line3 > div > img{
+            width: 0px;
+            height: 0px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+        }
+        .line4 > div >img{
+            width: 50px;
+            height: 50px;
+            transform: translate(0px,-50px);
+        }
+ 
+        .line1 >div , .line2 >div , .line3>div, .line4>div{
+            width: 50px;
+            height: 50px;
+            border: 3px solid black;
+            transition: all 10s;
+            overflow: hidden;
+            z-index: 1;
+            display: flex;
+        }
+
+        .line1 >div:hover img{
+            transform: translate(0px);
+            transition: all 1s;
+ 
+        }
+        .line2 >div:hover img{
+           opacity: 1;
+            transition: all 1s;
+
+        }
+        .line3 >div:hover img{
+            width: 50px;
+            height: 50px;
+            transition: all 1s;
+            position: relative;
+            left: 0%;
+            top: 0%;
+
+        }
+        .line4 >div:hover img{
+            transform: translate(0px) rotate(360deg);
+            transition: all 1s;
+            position: relative;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="line1">
+        <div>
+            <img src="images/rect_icon01.png">
+        </div>
+        <div>
+            <img src="images/rect_icon02.png">
+        </div>
+        <div>
+            <img src="images/rect_icon03.png">
+        </div>
+        <div>
+            <img src="images/rect_icon04.png">
+        </div>
+        <div>
+            <img src="images/rect_icon05.png">
+        </div>
+    </div>
+    <div class="line2">
+        <div>
+            <img src="images/rect_icon01.png">
+        </div>
+        <div>
+            <img src="images/rect_icon02.png">
+        </div>
+        <div>
+            <img src="images/rect_icon03.png">
+        </div>
+        <div>
+            <img src="images/rect_icon04.png">
+        </div>
+        <div>
+            <img src="images/rect_icon05.png">
+        </div>
+    </div>
+    <div class="line3">
+        <div>
+            <img src="images/rect_icon01.png">
+        </div>
+        <div>
+            <img src="images/rect_icon02.png">
+        </div>
+        <div>
+            <img src="images/rect_icon03.png">
+        </div>
+        <div>
+            <img src="images/rect_icon04.png">
+        </div>
+        <div>
+            <img src="images/rect_icon05.png">
+        </div>
+    </div>
+    <div class="line4">
+        <div>
+            <img src="images/rect_icon01.png">
+        </div>
+        <div>
+            <img src="images/rect_icon02.png">
+        </div>
+        <div>
+            <img src="images/rect_icon03.png">
+        </div>
+        <div>
+            <img src="images/rect_icon04.png">
+        </div>
+        <div>
+            <img src="images/rect_icon05.png">
+        </div>
+    </div>
+</body>
+</html>

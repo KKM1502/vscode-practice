@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        폼, Form
+        - 입력 양식, 입력 컨트롤
+        - 클라이언트로부터 입력장치를 통해서 데이터를 입력받는 역할
+        - 입력 데이터 > 서버로 전송!! > 업무 활동 or DB 저장 등
+
+        <form>
+        - 모든 입력 컨트롤을 감싸는 컨테이너
+        - 입력값을 서버로 전송하는 역할(택배 상자)
+        
+        form.method
+        - 데이터를 전송하는 방식
+        1. get 
+        	- 전송되는 데이터를 URL에 붙여서 전송하는 방식
+        	- 편법
+        	- http://localhost:14314/client/html/ex19.jsp?data=java
+        	- 전송되는 데이터가 노출(주소창) > 보안 X	
+        	- 노출되면 안되는 데이터는 절대로 get방식으로 전송 금지
+			- URL(최대 256자) > Overflow > 데이터 짤림 > 대량의 데이터를 전송할 수 없다.(65536바이트)
+			- 아주 짧은 데이터(식별자, 숫자 등)만 전송하는 용도
+	
+	        	
+        2. post
+        	- 전송되는 데이터를 패킷안에 넣어서 전송하는 방식
+        	- 표준
+        	- http://localhost:14314/client/html/ex19.jsp
+        	- 데이터가 외부로 노출되지 않는다. > get방식에 비해 보안이 조금 더 낫다.
+        	- 전송 길이 무제한 
+        
+        
+        
+        form.action
+        - 데이터를 수신하는 서버 측 주소
+        - 데이터를 수신할 능력이 있는 프로그램의 주소
+
+     -->
+     <h1>데이터 입력</h1>
+     <form method="post" action="ex19.jsp">
+        <input type="text" name="data">
+        <input type="submit" value="전송하기"> 
+     </form>
+     <hr>
+     <h1>네이버 검색</h1>
+     <form method="get" action="https://search.naver.com/search.naver">
+        <input type="text" name="query">
+        <input type="submit" value="검색">
+     </form>
+     <hr>
+
+     <h1>폼 컨트롤</h1>
+     <!-- 
+
+        <input> 태그
+        - 인라인 태그
+        - 단독 태그
+
+        - input.type : 입력 컨트롤의 종류
+        - input.name : 식별자
+        - input.id : 식별자, CSS/JS에서 사용
+        - input.class : 식별자, CSS/JS에서 사용
+        - input.size : 길이(문자 개수)
+        - input.maxlength: 최대 입력 길이(문자수)
+        - input.value: 컨트롤의 입력값(현재 입력값)
+        - input.readonly : 읽기 전용(전원on) > 서버로 전송 가능
+        - input.disabled : 비활성화(전원off) > 서버로 전송 불가능
+        - input.accesskey : 바로가기(alt+조합키)
+        - input.autocomplete
+
+      -->
+      <form action="">
+        텍스트 박스(단일라인):
+        <input type="text" name="txt1" class="txt" size="20" accesskey="s" autocomplete="off">
+        
+        <hr>
+
+        <!-- 
+
+            암호 상자, Masked Text Box
+            모든 속성이 텍스트박스와 동일
+            - value 속성은 사용 금지> 항상 새로 입력받게 만든다
+         -->
+         텍스트박스(암호):
+         <input type="password">
+
+         <hr>
+        <!--      
+            텍스트 박스
+            - 다중라인 입력
+            - 쌍태그
+            - 대부분의 속성은 텍스트 박스와 동일
+            - value 속성이 없다.
+            - textarea내의 영역은 일반 문서 영역이 아니라 컨트롤 영역이다.
+             편집기의 공백이 그대로 적용된다.
+
+        -->
+         텍스트박스(다중라인):
+        <textarea id="" cols="50" rows="5">안녕하세요</textarea>
+        <hr>
+        <!-- 
+            체크박스
+            - 논리값 입력
+                
+        -->
+        체크박스:
+        <input type="checkbox" disabled>
+        <h2>취미선택</h2>
+        <input type="checkbox" id="cb1"><label for="cb1">독서</label>
+        <label><input type="checkbox">수영</label>
+        <input type="checkbox" checked>영화
+        <hr>
+        <!-- 
+            라디오 버튼
+            - 반드시 2개 이상 함께 사용
+            - 단일선택
+         -->
+         
+         <input type="radio" name="rbGender">남자
+         <input type="radio" name="rbGender">여자
+         <input type="radio" name="rbGender" checked>응답안함   
+
+         <hr>
+
+         <!-- 
+            셀렉트 박스
+            - 콤보 박스, 드랍 다운 리스트
+          -->
+          셀렉트 박스:
+          <select>
+                <option>강아지</option>
+                <option>고양이</option>
+                <option>병아리</option>
+          </select>
+          <br>
+          셀렉트박스:
+          <select>
+            <option disabled>◎자바◎</option>
+                <option>Class</option>
+                <option>Method</option>
+                <option>Array</option>
+
+                <option disabled>◎Oracle◎</option>
+                <option>Table</option>
+                <option>Procedure</option>
+                <option>Join</option>
+                <option>SubQuery</option>
+
+                <option disableds>◎HTML◎</option>
+                <option>head</option>
+                <option>body</option>
+          </select>
+
+          <br>
+          셀렉트박스:
+        <select>
+            <optgroup label="자바">
+                <option>Class</option>
+                <option>Method</option>
+                <option>Array</option>
+            </optgroup>
+            <optgroup label="오라클">
+             
+                <option>Table</option>
+                <option>Procedure</option>
+                <option>Join</option>
+                <option>SubQuery</option>
+            </optgroup>
+            <optgroup label="HTML">
+            
+                <option>head</option>
+                <option>body</option>
+            </optgroup>
+        </select>
+
+        <hr>
+        <!-- 
+            파일 업로드
+            -첨부파일
+            - Open Dialog Box 호출하는 역할
+         -->
+         <input type="file">
+
+         <hr>
+
+         <!-- 
+            히든 태그
+            - 눈에 보이지 않는 태그
+            - 개발자용
+            - 사용자 모르게 서버로 데이터를 전송하는 역할
+          -->
+
+        <input type="hidden" name="id" value="hong">
+        <hr>
+    
+        <!-- 
+        버튼들
+
+        input이 더 먼저 만들어지고 button이 만들어짐 (디자인 기능이 보강)
+        
+        -->
+        전송버튼: <input type="submit" value="보내기">
+        <br><br>
+        취소버튼: <input type="reset" value="초기화">
+        <br><br>
+        일반버튼: <input type="button" value="일반 버튼" onclick="alert('안녕하세요')">
+        <br><br>
+        전송버튼: <button type="submit">보내기</button>
+        <br><br>
+        취소버튼: <button type="reset">reset</button>
+        <br><br>
+        일반버튼: <button type="button">일반버튼</button>
+
+        <hr>
+        <!-- 속성값 > CDATA -->
+        <input type="submit" value="<img src=''> 보내기">
+        <button type="submit"><img src="문제/images/cat01.jpg"> 보내기"></button>
+
+      </form>
+
+
+
+
+</body>
+
+</html>
