@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+
+            text-align: center;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="tbl1">
+        <tbody id="tbody1">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        
+        const tbl1=document.getElementById('tbody1');
+        
+        let column = 2;
+        let row = 2 ;
+        let index= 1;
+        let txt ='';
+
+        window.onkeydown=function(){
+            
+            console.log(event.keyCode);
+            if(event.keyCode==37){
+                column--;
+                if(column<1){
+                    column=1;
+                    f1();
+                }
+                else{
+                f1();
+                }
+            }
+            
+            else if(event.keyCode==39){
+                column++;
+                f1();
+            }
+            else if(event.keyCode==38){
+                row--;
+                if(row<1){
+                    row=1;
+                    f1();
+                }
+                else{
+                f1();
+                }
+            }
+            else if(event.keyCode==40){
+                row++;
+                f1();
+            }
+        }
+
+        function f1(){
+            tbl1.innerHTML='';
+            txt=''
+            for(let i =0;i<row;i++){
+                txt+='<tr>' ;
+                    for(let j=0; j<column;j++){
+                        txt+='<td>'+index;
+                        txt+='</td>';
+                        index++;
+                    }
+                txt+='</tr>';
+                
+            }
+            tbl1.innerHTML+=txt;
+            index=1;
+        }
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <form name="form1">
+        <input type="text" name="txt1">
+        <input type="button" value="확인" name="btn1">
+        <hr>
+        <input type="button" value="끄기" name="btn2">
+    </form>
+    <script>
+
+        /*
+            JS 로 HTML의 속성 제어하기
+            1. HTML 태그의 대부분의 속성은 JS의 프로퍼티로 제공된다.
+                - HTML : <input type="text" size="10">
+                - JS : txt1.size
+            2. HTML태그의 속성명을 그대로 JS 프로퍼티명으로 사용한다.
+
+            3. 대부분 읽기/쓰기를 모두 지원. 
+
+            속서명이 복합어면 캐멀표기법으로 작성한다.  
+        */
+        
+        var txt1 = window.document.form1.txt1;
+        var btn1 = window.document.form1.btn1;
+        var btn2 = window.document.form1.btn2;
+        btn1.onclick=m1;
+        btn2.onclick=m2;
+        function m2(){
+
+            //하나의 버튼 > on/off > 토클 버튼
+            var k=window.document.body.bgColor;
+            if(k!='black'){
+                window.document.body.bgColor='black';
+                window.document.form1.btn2.value='켜기';
+            }else{
+                window.document.body.bgColor='white';
+                window.document.form1.btn2.value='끄기';
+            }
+        }
+        function m1(){
+            txt1.value='홍길동';
+        }
+
+    </script>
+</body>
+</html>

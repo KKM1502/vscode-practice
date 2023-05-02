@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>셀렉트박스</h1>
+    <select name="sel1" multiple size="7">
+        <option value="a1">돼지</option>
+        <option value="a2">돼지</option>
+        <option value="a3">돼지</option>
+        <option value="a4">돼지</option>
+        <option value="a5">돼지</option>
+        <option value="a6">돼지</option>
+    </select>
+    <hr><input type="button" value="선택한 항목 확인하기" name="btn1">
+    <hr><input type="button" value="항목 추가하기" name="btn2">
+    <hr><input type="button" value="항목 삭제하기" name="btn3" onclick="m4();">
+    <hr><input type="button" value="다중 선택한 항목 확인하기" name="btn5" onclick="m5();">
+    <hr>
+    태어난 년도: <select name="selyear">
+                    
+                </select>
+
+
+    <script>
+
+        var sel1 = document.all.sel1;
+        function m3() {
+            //동적으로 <option> 생성하기
+            // - <option value ="a8">도마뱀</option>
+             //<option> 중복 검사 
+                for( var i=0; i<sell.options.length; i++){
+                    if(sel1.options[i].text =='도마뱀'){
+                        return;
+                    }
+                }
+
+            var op = new Option(); //<option></option>
+            op.value='a8';
+            op.text = '도마뱀';
+
+            //<select> + <option>
+            sel1.options.add(op);
+
+           
+        }
+        function m2() {
+            //프로퍼티
+            //1. HTML 속성을 그대로 똑같이 만들어 놓은 프로퍼티
+            //2. JavaScript가 독자적으로 만들어 놓은 프로퍼티
+            sel1.selectedIndex;
+            
+            sel1.selectedIndex = 2;
+        }
+
+        function m4(){
+            //<option> 삭제하기 > index shift 발생
+            //sel1.options.remove(3);
+
+            //선택한 동물 삭제하기
+            sel1.options.remove(sel1.selectedIndex);
+
+        }
+        function m5(){
+            //단일 선택
+            //alert(sel1.value);
+
+            for(var i=0; i<sel1.options.length;i++){
+                // alert(sel1.options[i].selected);
+                if(sel1.options[i].selected){
+                    console.log(sel1.options[i].text, sel1.options[i].value);
+                }
+            }
+        }
+        
+        var selyear = document.all.selyear;
+        for (var i=1960; i<=2010; i++){
+            var op = new Option(i+'년',i);
+            selyear.options.add(op);
+
+        }
+        selyear.value = '1990';
+
+
+    </script>
+
+
+</body>
+</html>

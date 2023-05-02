@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../../css/images/catty01.png" name="cat1" width="128">
+    <img src="../../css/images/catty02.png" name="cat2" width="128">
+    <img src="../../css/images/catty03.png" name="cat3" width="128">
+    <img src="../../css/images/catty04.png" name="cat4" width="128">
+    <img src="../../css/images/catty05.png" name="cat5" width="128">
+
+    
+    <script>
+     window.document.images[0].onmouseover=m1;
+     window.document.images[1].onmouseover=m2;
+     window.document.images[2].onmouseover=m3;
+     window.document.images[3].onmouseover=m4;
+     window.document.images[4].onmouseover=m5;
+     
+    window.document.images[0].onclick=m6;
+    window.document.images[1].onclick=m7;
+    window.document.images[2].onclick=m8;
+    window.document.images[3].onclick=m9;
+    window.document.images[4].onclick=m10;
+
+    
+    window.document.body.onkeydown=m11;
+
+     function m1(){
+        window.document.images[0].width=window.document.images[0].width+1;
+     }
+     function m2(){
+        window.document.images[1].width=window.document.images[1].width+1;
+     }
+     function m3(){
+        window.document.images[2].width=window.document.images[2].width+1;
+     }
+     function m4(){
+        window.document.images[3].width=window.document.images[3].width+1;
+     }
+     function m5(){
+        window.document.images[4].width=window.document.images[4].width+1;
+     }
+     
+     function m6(){
+        window.document.images[0].width="128";
+     }
+     function m7(){
+        window.document.images[1].width="128";
+     }
+     function m8(){
+        window.document.images[2].width="128";
+     }
+     function m9(){
+        window.document.images[3].width="128";
+     }
+     function m10(){
+        window.document.images[4].width="128";
+     }
+
+     function m11(){
+ 
+        console.log(event.keyCode);
+        if(event.keyCode===27){
+        window.document.images[0].width="128";
+        window.document.images[1].width="128";
+        window.document.images[2].width="128";
+        window.document.images[3].width="128";
+        window.document.images[4].width="128";
+        }
+    }
+     
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //자바스크립트 배열
+        //- Array(외형) + ArrayList(길이 가변, 자료형 자유)
+        // int[] nums = new int[3]
+
+        var nums = new Array();
+        nums[0]=100;
+        nums[1]=200;
+        nums[2]=300;
+        nums[5]=500; //되도록 사용하지 말자
+        console.log(nums[5]);
+        for(var i=0; i<nums.length;i++){
+            console.log(i,nums[i]);
+        }
+
+        //초기화 리스트
+        //int[] nums = new int[] {100,200,300};
+        //int[] nums = {100, 200, 300};
+        var nums2 = new Array(100,200,300,400,500);
+        var nums3 = [100,200,300,400,500];
+        console.log(nums2);
+        console.log(nums3);
+
+        //빈배열
+        var num4 = new Array();
+        var num5 = [];
+
+        //배열 > 스택처럼 활용
+        var list = [];
+        // list[0]=10;
+        list.push(10,20,30,40);
+        console.log(list);
+
+        console.log(list.pop());
+        console.log(list.pop());
+        console.log(list.pop());
+        console.log(list.pop());
+        
+        //예외 처리
+        try{
+            var m =0;
+            console.log(100/m); //infinite
+
+            console.log(n); //n is not defined
+
+        } catch(e){
+            console.log('예외처리')
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #first{
+        width: 170px;
+    }
+    #names input{
+        width: 120px;
+        margin-bottom: 10px;
+    }
+    table{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    br{
+        border: 1px solid black;
+    }
+    td{
+        width: 150px;
+        text-align: center;
+        color: rgb(85, 85, 85);
+        font-weight: bold;
+    }
+    #content td{
+        border: 1px solid black;
+        color: rgb(85, 85, 85);
+    }
+    </style>
+</head>
+<body>
+    <!--  -->
+
+    <h1>테이블</h1>
+    <fieldset id="first">
+        <legend>색상 입력</legend>
+        <div id="colors">색상: <input type="color" id=color value="black">  </div>
+        <div id="names">이름: <input type="text" id="name"></div> 
+        
+        <div id="add"><input type="button" value="추가하기" onclick="add();"> </div>
+    </fieldset>
+<br>
+    <fieldset>
+        <table id="second">
+            <tr>
+                <td>색상명</td>
+                <td>미리보기</td>
+            </tr>
+            <tr id="content">
+                <td>노랑색</td>
+                <td>#FFFF00</td>
+            </tr>
+            <tr id="content">
+                <td>풀색</td>
+                <td>#ACEF12</td>
+            </tr>
+
+        </table>
+    </fieldset>
+
+    <script>
+        const getcolor=document.getElementById('color');
+        const getname=document.getElementById('name');
+        const temp = document.getElementById('second');
+
+        function add(){
+            temp.innerHTML+=
+                '<tr id="content">'+'<td>'+getname.value+'</td>'+'<td bgColor="'+color.value+'">'+color.value+'</td>'+
+                '</tr>';    
+            
+        };
+
+
+
+    </script>
+</body>
+</html>

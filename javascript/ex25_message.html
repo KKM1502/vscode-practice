@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name = "form1">
+        <input type="button" name="btn1" value="버튼1">
+        <input type="button" name="btn2" value="버튼2">
+        <input type="button" name="btn3" value="버튼3">
+    </form>
+    <script>
+
+        document.form1.btn1.onclick = m1;
+        document.form1.btn2.onclick = m2;
+        document.form1.btn3.onclick = m3;
+
+
+        //메시지 박스, 대화 상자
+        //1. void alert(message);   메시지 전달용
+        //2. boolean confrim(message);  
+        //----------------------------------------
+        
+        //3. string prompt(message, value);
+        function m1(){
+            alert(1);
+        }
+        function m2(){
+            if(confirm('정말 삭제하시겠습니까 ?')){
+                document.body.bgColor='blue';
+            }else{
+                document.body.bgColor='white';
+            }
+            
+        }
+        function m3(){
+            var input = prompt('ISFKMNVI}','초깃값');
+            console.log(input);
+        }
+        
+     </script>
+
+</body>
+</html>

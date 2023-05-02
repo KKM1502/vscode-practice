@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .check{
+            background-color: yellow;
+            border: 10px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex43_axis.html -->
+    <h1>Axis</h1>
+    <div>
+        할아버지
+        <div>
+            큰아버지
+            <div>사촌</div>
+        </div>
+        <div>
+            아버지
+            <div>
+                큰형
+                <div>조카</div>
+            </div>
+            <div>
+                작은형
+            </div>
+            <div id="me">
+                나
+                <div>큰애</div>
+                <div>
+                    둘째
+                    <div>손자</div>
+                </div>
+                <div>막내</div>
+            </div>
+            <div>
+                동생
+            </div>
+            <div>
+                막내동생
+                <div>조카</div>
+            </div>
+        </div>
+        <div>
+            작은아버지
+            <div>사촌</div>
+        </div>
+    </div>
+    <input type="button" id="btn" value="찾기">
+
+
+    <script>
+    
+        //DOM > id, class, name, tagname
+        //- 식별자로 검색하는 도구
+
+        //DOM > Axis(Traversing)
+        //-본인을 기준으로 주변의 요소(부모,자식,형제)를 검색하는 도구
+
+        document.getElementById('btn').onclick=function(){
+            const me = document.getElementById('me')
+
+            //타로부터 다른 사람 검색
+            // me.className='check';
+            
+            //자식 태그
+            //-me.childNodes
+            // console.log(me.childNodes.length);
+
+            //- me.children : 자식 태그들
+            //- me.firstElementChild
+            //- me.lastElementChild
+
+
+
+            // for(let i=0; i<me.childNodes.lelgnth;i++){
+            //     // DOM 트리 구성 요소
+            //     //-구성요소 > 태그, PCDATA, 주석, 엔티티, 선언문...
+            //     //1. 태그
+            //     //2. 속성
+            //     //3. PCDATA
+            //     //8. 주석
+            //     //13. 선언문
+
+            //     // DOM 트리 구성 노드의 프로퍼티
+            //     //1. nodeType > 해당 노드가 어떤 형식인지 열거형(숫자)로 반환
+            //     //2. nodeName > 태그(태그명), 속성(속성명), PCDATA(#text)로 반환
+            //     //3. nodeValue > 태그(null), 속성(속성값), PCDATA(문자열)을 반환
+            //     // console.log(me.childNodes[i].nodeType);
+
+            //     if(me.childNodes[i].nodeType==11&&me.childNodes[i].nodeName =='div'){
+            //         me.childNodes[i].className='check';
+            //     }
+            // }
+            // me.firstElementChild.className='check';
+            // me.lastElementChild.className='check';
+            // for(let i=0; i<me.children.length;i++){
+            //     me.children[i].className='check';
+            // }
+
+            // for(let i=0; i<me.children.length;i++){
+            //     for(let j=0; j<me.children.children.length;j++){
+            //     me.children[i].children[j].className='check';
+            //     }
+            // }
+
+
+
+            //부모 & 조상
+            //- me.parentNode
+            //- me.parentElement
+            me.parentNode.className='check';
+
+            //Window가 최상위 객체 ::BOM 모델
+            //document 가 최상위 객체 :: DOM 모델에서
+
+            //바로 위의 형제
+            //- me.previousSibling
+            //- me.previousElementSibling
+
+            //바로 밑의 형제
+            //- me.nextSibling
+            //- me.nextElementSibling
+        }
+
+
+
+    </script>
+</body>
+</html>

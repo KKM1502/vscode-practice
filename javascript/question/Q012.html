@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr{
+
+            text-align:center;
+        }
+        td{
+            padding-right: 10px;
+        }
+        .txt{
+            width:350px;
+        }
+    </style>
+</head>
+<body>
+    <h3>입력하기</h3>
+    <table>
+        <tr>
+            <td>번호</td>
+            <td>입력</td>
+            <td>잠금</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox"onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>9</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox" onclick="m1();"></td>
+        </tr>
+        
+        <tr>
+            <td>10</td>
+            <td><input type="text" class="txt" name="txt"></td>
+            <td><input type="checkbox" name="cbox" onclick="m1();"></td>
+        </tr>
+
+        
+    </table>
+    <script>
+        // console.log(document.all.cbox.length);
+        // document.all.txt[0].disabled=true;
+        function m1(){
+            for(var i =0; i<document.all.cbox.length;i++){
+                if(document.all.cbox[i].checked==true){
+                    document.all.txt[i].disabled=true;
+                }
+                else{
+                    document.all.txt[i].disabled=false;
+                }
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

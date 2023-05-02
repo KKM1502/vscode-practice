@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="/css/images/cat01.jpg" name="cat1" onmouseover="m1(1);">
+        <img src="/css/images/cat02.jpg" name="cat2" onmouseover="m1(2);">
+        <img src="/css/images/cat03.jpg" name="cat3" onmouseover="m1(3);">
+        <img src="/css/images/cat04.jpg" name="cat4" onmouseover="m1(4);">
+        <img src="/css/images/cat05.jpg" name="cat5" onmouseover="m1(5);">
+    </div>
+    <script>
+        function m1(i){
+            if(document.images['cat' + i ].src.endsWith('cat0'+i+'.jpg')){
+                document.images['cat' + i ].src='/css/images/dog0'+i+'.jpg';
+            }
+            else{
+            document.images['cat' + i ].src='/css/images/cat0'+i+'.jpg';
+            }
+        }
+
+    </script>
+</body>
+</html>

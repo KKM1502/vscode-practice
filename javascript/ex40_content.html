@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!--  -->
+    <h1>테이블 생성</h1>
+    
+    <fieldset>
+        <legend>행 x 열</legend>
+        <label>행: <select id="selrow"></select> </label>
+        <label>열: <select id="selcolumn"></select> </label>
+        <input type="button" value="만들기" id="btncreate">
+    </fieldset>
+    <table id="tbl1"></table>
+    
+    
+    
+    
+    <script>
+        const btncreate = document.getElementById('btncreate');
+        const selcolumn = document.getElementById('selcolumn');
+        const selrow = document.getElementById('selrow');
+        const tbl1 = document.getElementById('tbl1');
+        //BOM
+        //const op = new Option();
+        //op.value ='';
+        //op.text='';
+
+        //DOM
+        //selrow.innerHTML += '<option></option>';
+        for(let i=1; i<=10; i++)
+        {selrow.options.add(new Option(i,i));
+        selcolumn.options.add(new Option(i,i));}
+
+        btncreate.onclick=function(){
+            let temp = '';
+            for (let i=0; i<selrow.value;i++){
+                //행 생성
+                temp+='<tr>';
+                for(let j=0; j<selcolumn.value; j++){
+                    //열 생성
+                    temp +='<td>';
+                    temp += i+'행' +j +'열';
+                    temp +='</td>';
+                }
+                temp+='</tr>';
+            }
+            tbl1.innerHTML=temp;
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    <button type="button" name="btn1"></button>
+    <script>
+    /*
+    
+    JS Function
+    - 함수는 1급 객체이다.
+    - 1급 객체, First class object
+    - 함수를 객체처럼 취급한다. > 함수를 값처럼 취급할 수 있다.
+
+    1. 함수를 변수에 담을 수 있다.
+    2. 함수를 매개변수에 전달할 수 있다.
+    3. 함수를 반환값으로 사용할 수 있다.
+    
+    함수 선언
+    ㅎ
+    */
+
+    let n1;
+
+    function f1(){
+        console.log('f1');
+    };
+    let n4 = function(){};
+
+    n1=f1;
+    n1();
+    n4();
+    //익명함수 호출2
+    (function() {
+        console.log('f2');
+    });
+
+
+    document.all.btn.onclick=m5;
+
+    function m5(){
+        alert('click')
+    }
+    let hong={
+        name:'hong',
+        age:20,
+        address:'서울시     강남구',
+        hello: function(){
+            console.log('안녕하세요.저는' +this.name +'입니다.');
+        }
+    };
+
+    </script>
+
+    
+    
+
+
+
+</body>
+</html>

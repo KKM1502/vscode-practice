@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style> 
+        .box{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    
+    </style>
+</head>
+<body>
+    <!--  -->
+
+    <div id="box1" class="box small bg-yellow" >상자1</div>
+    <div id="box2" class="box bg-red" >상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box inline">상자4</div>
+    <div id="box5" class="box inline bg-green">상자5</div>
+    <table class="table striped wide">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <script>
+        
+        
+        const box1 = document.getElementById('box1');
+        const list = document.getElementsByClassName('box');
+        let index = 0;
+        let zindex= 1;
+
+        window.onmousedown = function(){
+            // // alert(`${event.clientX}:${event.clientY}`);
+            // box1.style.left=event.clientX +'px';
+            // box1.style.top=event.clientY +'px';
+            console.log(index);     
+
+            list[index].style.left=event.clientX +'px';
+            list[index].style.top=event.clientY +'px';
+            list[index].style.zindex=zindex;
+            zindex--;
+            index++;
+            if(index >= 5) index=0;     
+            
+        }
+        
+        
+    </script>
+</body>
+</html>

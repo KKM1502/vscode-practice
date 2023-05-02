@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{display: block;}
+    </style>
+</head>
+<body>
+    <h1>라디오 버튼</h1>  
+    <label>
+        <input type="radio" name="rb" value="white">흰색
+    </label>
+    <label>
+        <input type="radio" name="rb" value="red">빨강색
+    </label>
+    <label>
+        <input type="radio" name="rb" value="yellow">노랑색
+    </label>
+    <label>
+        <input type="radio" name="rb" value="blue">파랑색
+    </label>
+    <label>
+        <input type="radio" name="rb" value="black">검은색
+    </label>
+    <script>
+        var rb = document.all.rb;
+        for(var i=0; i<rb.length; i++){
+            rb[i].onchange = m1;
+        }
+
+        function m1() { 
+            //5개의 라디오 버튼 중 누가 나를 불렀을까 
+            alert(event.target.value);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- ex35_object.html -->
+
+    <script>
+    
+    /*
+    
+        객체, Object
+        - JavaScript에는 클래스가 없다. 하지만 내장 객체를 제공한다.
+
+        1. 내장 객체
+            -Date, Array, Math, Object, Option등...
+            -new Date()
+            -new Array()
+
+        2.BOM 객체  
+            -window, document, form, text, button,,,
+            - BOM 트리 > 구성 요소들...
+
+        3.DOM 객체
+            -element, attribute, text 등...
+
+        4.사용자 정의
+            - JavaScript에는 클래스가 없다 > 원하는 형태의 객체를 만들 수 있다.
+            - ES6에서 클래스 문법이 만들어짐 > 진짜 class가 아니라, class처럼 흉내낸 문법을 도입.
+
+
+        사용자 정의 객체 만드는 방법
+        1. Object 클래스 사용
+        2. {} : 객체 리터럴 표기법 사용
+
+
+        class User {
+            public String name;
+            public int age;
+            public String addresss;
+        }
+
+        User hong = new User();
+        hong.name ="홍길동";
+        hong.age = 20;
+        hong.address = "서울시 강남구"
+    */
+        
+    // var hong = new Object();
+    // let hong = new Object();
+    const hong = new Object();
+
+    // JAVA의 HashMap과 유사
+    // JS 에서 객체에 프로퍼티를 추가하는 방법
+    hong.name = '홍길동';
+    hong.age = 20;
+    hong.address = '서울시 강남구';
+
+    hong['address']= '서울시 강동구';
+    console.log(hong);
+
+    const lee = new Object();
+    lee.name = '이순신';
+    lee.age =25;    
+    lee.address = '서울시 동대문구';
+
+    const you = {
+        name:'이순신',age: 25, address:'서울시 동대문구'
+    };
+
+    const address= {
+        sido: '서울시',
+        gugun: '강남구',
+        dong:'역삼동'
+    };
+    const jo = {
+        name :'조세호', age:29, address:address
+    };
+    const yang={
+        name:'양세찬',age:29, address:{
+            sido:'서울시',
+            gugun:'송파구',
+            dong:'마천동'
+        }
+    }
+
+    </script>
+</body>
+</html>

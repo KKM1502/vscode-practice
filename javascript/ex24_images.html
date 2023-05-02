@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>이미지</h1>
+    <input type="button" value="확인" name="btn1">
+    <hr>
+    <img src="/css/images/cat01.jpg" name="cat1">
+    <hr>
+    <img src="/css/images/cat01.jpg" name="cat2">
+    <hr>
+    <img src="/css/images/switch_off.png" name="sw1">
+    <hr>
+    <img src="/css/images/circle_icon01.png" name="icon">
+    <hr>
+    <img src="/css/images/dog01.jpg" name="dog">
+    <hr>
+    <img src="/css/images/0.png" name="number">
+
+
+
+    <script>
+
+        document.all.btn1.onclick=m1;
+        function m1(){
+            var cat1 = document.images['cat1'];
+            cat1.width=500;
+        }
+
+        var cat2 = document.images['cat2'];
+
+        //롤오버 이미지
+        cat2.onmouseover = m2;
+        cat2.onmouseout = m3;
+
+        function m2(){
+            cat2.src = '/css/images/cat02.jpg';
+        }
+        function m3(){
+            cat2.src = '/css/images/cat01.jpg';
+        }
+
+        //name, id 식별자 > 직접 접근
+        document.images['sw1'].onclick = m4;
+
+        function m4() {
+            if(document.images['sw1'].src.endsWith('on.png')){
+                document.images['sw1'].src = '/css/images/switch_off.png';
+            }else{
+                document.images['sw1'].src = '/css/images/switch_on.png';
+            }
+        }
+
+        var icon = document.images['icon'];
+
+        var n =1 ;
+        // icon.onclick = m5;
+        // document.body.onmousemove = m5;
+        function m5(){
+            n++;
+            if(n>18){
+                n=1;
+            }
+            icon.src = '/css/images/circle_icon' + addZero(n) + '.png';
+
+        }
+        function addZero(n){
+            if(n<10){
+                return '0' + n;
+            }
+            return n;
+        }
+
+        //키이벤트 + 뷰어
+        var viewer = document.images['dog'];
+        n = 1; 
+        //전역 이벤트 > 화면상 모든곳에서 발생한다.
+        window.onkeydown = m7;
+
+        function m6() { 
+            if(event.keyCode ==37){
+                n--;
+                if(n<1){
+                    alert('처음 이미지입니다.');
+                    n=1;
+                    return;
+
+                }
+            }else if(event.keyCode == 39){
+                n++;
+                if(n>5){
+                    alert('마지막 이미지');
+                    n=5;
+                    return; //함수 종료
+                }
+            }
+            viewer.src='/css/images/dog0'+n+'.jpg';
+        }
+        var number = document.images('number');
+        function m7(){
+            // alert(event.keyCode);
+            var no = event.keyCode -48
+            number,src = '/css/images/'+no+'.png';
+        }
+
+    </script>
+
+
+</body>
+</html>

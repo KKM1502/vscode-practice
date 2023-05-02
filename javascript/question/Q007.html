@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .first{
+            margin-left: 15px;
+        }
+        .first  img{
+            border: 7px solid gray;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Pattern Lock</h1>
+    <div>
+        <div class="first">
+            <img src="/css/images/rect_icon01.png" name="icon1" onmouseover="m1(1);">
+            <img src="/css/images/rect_icon02.png" name="icon2" onmouseover="m1(2);">
+            <img src="/css/images/rect_icon03.png" name="icon3" onmouseover="m1(3);">
+        </div>
+        <div class="first">
+            <img src="/css/images/rect_icon04.png" name="icon4" onmouseover="m1(4);">
+            <img src="/css/images/rect_icon05.png" name="icon5" onmouseover="m1(5);">
+            <img src="/css/images/rect_icon06.png" name="icon6" onmouseover="m1(6);">
+        </div>
+        <div class="first">
+            <img src="/css/images/rect_icon07.png" name="icon7" onmouseover="m1(7);">
+            <img src="/css/images/rect_icon08.png" name="icon8" onmouseover="m1(8);">
+            <img src="/css/images/rect_icon09.png" name="icon9" onmouseover="m1(9);">
+        </div>
+    </div>
+    <input type="button" value="RESET" name="reset" style="width:230px; height:40px;" onclick="m3()">
+    <input type="button" value="INPUT" name="input" style="width:230px; height:40px;" onclick="m2()">
+    <script>
+
+        function m1(i){
+            document.images['icon'+i].src='/css/images/rect_icon10.png';
+        }
+        function m2(){
+            if(document.images['icon1'].src.endsWith('10.png')&&document.images['icon2'].src.endsWith('2.png')&&document.images['icon3'].src.endsWith('3.png')&&document.images['icon4'].src.endsWith('10.png')&&document.images['icon5'].src.endsWith('5.png')&&document.images['icon6'].src.endsWith('6.png')&&document.images['icon7'].src.endsWith('10.png')&&document.images['icon8'].src.endsWith('10.png')&&document.images['icon9'].src.endsWith('10.png')){
+                window.open('https://www.google.com/');
+
+            }
+            else{
+                alert('failed');
+            }
+            
+        }
+        function m3() {
+            for(var i=1; i<10; i++){
+                document.images['icon'+i].src='/css/images/rect_icon0'+i+'.png';    
+            }
+        }
+
+    </script>
+</body>
+</html>

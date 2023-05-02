@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        <input type="button" name="btn1" value="뒤로가기">
+        <input type="button" name="btn2" value="앞으로가기">
+        <input type="button" name="btn3" value="2단계 뒤로가기">
+        <input type="button" name="btn4" value="2단계 앞으로가기">
+    </form>
+
+    <script>
+
+        //history 객체
+        //- window의 자식
+        //- 브라우저의 탐색 기록(history)
+
+        document.form1.btn1.onclick=m1;
+        document.form1.btn2.onclick=m2;
+        document.form1.btn3.onclick=m3;
+        document.form1.btn4.onclick=m4;
+
+        function m1(){
+            window.history.back();//뒤로가기
+        }
+        function m2(){
+            history.forward();//앞으로가기
+        }
+        function m3(){
+            history.go(-2);
+        }
+        function m4(){
+            history.go(2);
+        }
+
+
+    </script>
+</body>
+</html>

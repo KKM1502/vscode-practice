@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>타이머</h1>
+    <form name="form1">
+        <fieldset>
+            <input type="button" value="확인" name="btn1">
+            <input type="text" name="txt1">
+        </fieldset>
+        <fieldset>
+            <input type="button" value="확인" name="btn2">
+            <input type="text" name="txt2">
+        </fieldset>
+        <fieldset>
+            <input type="button" value="시작" name="btn3">
+            <input type="button" value="멈춤" name="btn4">
+            <input type="text" name="txt3">
+        </fieldset>
+
+        <img src="/css/images/catty01.png" name="cat" onclick="m4();">;
+
+    </form>
+
+    <script>
+        /*
+        
+            타이머, Timer
+
+            타이머 생성
+            1. number setTimeout(함수, 시간)
+                -1회성 타이머
+            
+            2. number setInterval(함수, 시간)
+                -반복성 타이머
+
+
+            타이머 종료
+            1. clearTimeout(id)
+
+            2. clearInterval(id)
+        
+        */
+
+        var btn1 = document.form1.btn1;
+        var btn2 = document.form1.btn2;
+        var btn3 = document.form1.btn3;
+        var btn4 = document.form1.btn4;
+
+
+        var txt1 = document.form1.txt1;
+        var txt2 = document.form1.txt2;
+        var txt3 = document.form1.txt3;
+
+        btn1.onclick= m1;
+        function m1(){
+            f1();
+        }
+
+        function f1(){
+            // alert('따르릉');
+            txt1.value=(new Date()).toLocaleTimeString();
+            setTimeout(f1,1000); //재귀호출 + 무한루프
+        }
+        btn2.onclick=m2;
+        function m2(){
+            setInterval(f2,1000);
+        }
+        function f2(){
+            txt2.value=(new Date()).toLocaleTimeString();
+        }
+        var n=1;
+        btn3.onclick=m3;
+        var timer=0;
+        var timerlist=[];
+
+
+        function m3(){
+            // if(timer==0){
+            //     timer=setInterval(f3,10);
+            //     console.log(timer);
+            // }
+            timer=setInterval(f3,10);
+            timerlist.push(timer);
+            
+        }
+        
+        function f3(){
+            txt3.value = n;
+            n++;
+        }
+
+        btn4.onclick=m4;
+        function m4(){
+            // clearInterval(timerlist.pop());
+            for(var i=0;i<timerlist.length;i++){
+                clearInterval(timerlist[i]);
+            }
+        }
+        var cat = document.images['cat'];
+        var m =1;
+        var ctimer =0;
+        function m5(){
+            setInterval(f5,100);
+        }
+        // function f5(){
+        //     cat.width++;
+        // }
+        function f5(){
+            m++;
+            if(m>9)m=1;
+            cat.src = '/css/images/catty0'+m+'.png';
+        }
+    </script>
+</body>
+</html>

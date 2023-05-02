@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        text-align: center;
+        padding-top: 40px;
+    }
+    input{
+        width: 200px;
+        height: 200px;
+        font-size: 150px;
+        text-align: center;
+        border: none;
+        margin: auto;
+        background-color: white;
+    }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <div>
+    <input type="text" name="count" value="10" readonly onkeyup="f2();">
+    </div>  
+    <script>
+
+        var i = parseInt(document.all.count.value);
+        var pause;
+        console.log(i);
+        m1();
+        function m1(){
+            pause=setInterval(f1,1000);
+        }
+        function f1(){
+            
+            if(i==0){
+                window.open('https://www.google.com/',EventTarget='_self');
+                clearInterval(pause);
+
+            }
+            else{
+                i--;
+                document.all.count.value=i;
+
+            }
+        }
+        function f2(){
+            if(event.keyCode==27){
+                clearInterval(pause);
+                document.body.bgColor='red';
+            }
+        }
+    </script>
+</body>
+</html>

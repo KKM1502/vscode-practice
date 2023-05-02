@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea, input{
+            display: block;
+            margin-bottom: 10px;
+        }
+        textarea{
+            width: 500px;
+            height: 300px;
+            outline: none;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>마우스 관련 이벤트</h1>
+
+    <form  name="form1">
+        <textarea name="txt1"></textarea>
+        <input type="text" value="확인" name="btn1">
+    </form>
+
+    <script>
+        
+        var txt1 = window.document.form1.txt1;
+        var btn1 = window.document.form1.btn1;
+
+        /*
+            마우스 관련 이벤트
+            -onmouseXXX
+            
+            1. onmouseover(= onmouseenter)
+                - 해당 객체의 영역에 마우스가 진입하느 순간 발생
+
+            2. onmouseout(= onmouseleave)
+                -
+            3. onmouseup
+                - 마우스 버튼을 떼면
+            4. onmousedown
+                - 마우스 버튼을 누르면
+            5. onmousemove
+                - 
+
+        */
+
+        function message(txt){
+            var now = new Date();
+            txt1.value = txt + '-'+ now.toLocaleTimeString() + '\r\n' + txt1.value;
+        }
+
+
+        txt1.onmouseover = m1;
+        function m1() {
+            // message('mouseover');
+            // window.document.body.bgColor='gold'
+
+        }
+        txt1.onmouseout = m2;
+        function m2() {
+            // message('mouseout');
+            // window.document.body.bgColor='white'
+        }
+
+        txt1.onmousedown =m3;
+        function m3() { 
+            // message('mousedown')
+            // 마우스 어떤 버튼 ?
+            // event.buttons
+            
+            //왼쪽 1, 오른쪽2, 왼쪽+오른쪽 = 3
+            // message(event.buttons);
+
+            // if(event.buttons==2){
+            //     alert('오른쪽마우스');
+            // }
+            //마우스 커서 좌표
+            //1. x,y
+
+            //2. clientX, clientY
+                // -문자 좌측 상단을 기준 
+                // - position: absolute;
+
+            //3. screenX, screenY
+
+            //4. offsetX, offsetY
+            //  - 나 자신이 기준
+            //  - position : relative;
+
+            // message(event.x + ','+event.y);
+            message(event.clientX + ','+event.clientY);
+        }
+        txt1.onmouseup =m4;
+        function m4() { 
+            // message('mouseup')
+        }
+        txt1.onmousemove =m5;
+        function m5() { 
+            // message('mouseumove')
+        }
+
+
+    </script>
+</body>
+</html>

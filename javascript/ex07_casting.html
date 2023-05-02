@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //형변환 > 함수 제공
+        //1. number pasreInt(value)
+        //2. number paseFloat(value)
+         
+        var n1 = 3.14;
+        console.log(parseInt(n1));
+
+        n1 =3.99;
+        console.log(parseInt(n1));
+        var n2 = '300';
+        console.log(parseInt(n2), typeof parseInt(n2));
+
+        var n4='3.14';
+        console.log(parseFloat(n4));
+
+        var n5 = '100점';
+        console.log(parseInt(n5));
+
+        var n6 = '점수100';
+        
+        console.log(parseInt(n6))// 처음부터 연속으로 나오는 숫자만 숫자취급하고 그 뒤의 모든 문자열+숫자, 문자열은 삭제한다.
+
+        var width = '200px';
+        
+        console.log(width +100);
+        console.log(parseInt(width)+100);
+        
+        
+        //boolean isNaN(value)
+        //- is not a number?
+        // - value 가 숫자가 아닙니까?
+        // 자료혀 검사는 안하고 데이터 형식만 검사
+
+        //사용자 입력 <input type="text"> : 나이 입력
+        var age ='20';
+        if (isNaN(age)){
+            console.log(1);
+        }
+        else{
+            console.log(2);
+        }
+
+    </script>
+</head>
+
+
+    </script>
+</body>
+</html>

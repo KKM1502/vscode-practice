@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #tbl1{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    #tbl1 td{
+        border: 1px solid black;
+    }
+    #tbl2{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    #tbl2 td{
+        border: 1px solid black;
+        width: 126px;
+        height: 126px;
+    }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <table id="tbl1">
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+        <tr>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+            <td>lorem2</td>
+        </tr>
+    </table>
+
+<hr>
+    <table id="tbl2">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+
+
+    </table>
+        
+    <script>
+    
+    //HTMLCollection
+    // const list1 = document.getElementById('tbl1').firstElementChild.children;
+
+    // //NodeList
+    // const list2 = document.querySelector('#tbl1 tr');
+    
+    // const names={
+    //     0: '홍길동',
+    //     1: '아무개',
+    //     2: '하하하'
+    // };
+
+    // console.log(name[0]);// 프로퍼티가 숫자인 경우 name.0으로는 표현 불가능하지만 name[0]으로는 표현 가능
+
+    // for(let i =0; i<names.length;i++){
+    //     console.log(i,names[i]);
+    // }
+
+
+    // //유사 배열 > Stream 계열 메소드 미지원
+    // names.forEach(name => console.log(name));
+    // Arrays.from(names).forEach(name => console.log(name));
+    
+    const list = document.querySelectorAll('#tbl1 tr');
+    for(let i =0; i<list.length;i++){
+        list[i].onmouseover=function(){
+            if(this.bgColor=='gold'){
+                this.bgColor='white';
+            }
+            else{
+                this.bgColor='gold';
+            }
+        }
+    }
+
+    const list2 =document.querySelectorAll('#tbl2 tr td');
+    const a = list2.children;
+    for(let i =0; i<list2.length;i++){
+        list2[i].onmousedown=f1;
+        event.stopPropagation();
+    }
+    function f1(){
+    
+        if(event.buttons==1){
+            let img = document.createElement('img');
+            img.setAttribute('src','/css/images/rect_icon01.png');
+            event.target.appendChild(img);
+            event.stopPropagation();
+        }else if(event.buttons==2){
+            let img = document.createElement('img');
+            img.setAttribute('src','/css/images/rect_icon02.png');
+            event.target.appendChild(img);
+            event.stopPropagation();
+        }else if(event.buttons==4){
+            this.removeChild(this.children[0]);
+        } 
+    
+    }
+    function f2(){
+
+        this.removeChild(this.firstElementChild);
+
+    }
+    </script>
+</body>
+</html>

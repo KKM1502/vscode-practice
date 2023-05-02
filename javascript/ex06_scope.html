@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            변수 영역
+            
+            자바
+            1. 멤버 변수 > 클래스 전역
+            2. 지역 변수 > 메소드 or 제어문
+
+            자바스크립트
+            1. 전역 변수 > HTML 페이지 전역> 선언문 실행(생성)~페이지 종료(소멸)
+            2. 지역 변수 >블럭 영역 변수(x), 함수 영역 변수(o), 함수만 지역으로 인식하고, 제어문을 인식하지 못한다.
+            
+         */ 
+        
+         var num1 = 100; //전역 변수. script 태그 내에서 직접 선언 
+         function m1() {
+            var num2 = 200; //지역 변수. m1
+            console.log('m1',num2); //지역 내 지역변수 접근 O
+            console.log('m1',num1); //지역 내 전역변수 접근 O
+            
+            if(true){
+                var num3 = 300; //지역 변수 .if
+                console.log('if',num3);
+                
+            }
+            console.log('m1',num3);
+
+         }
+         m1();
+
+         var a= 10;
+         var a = 20; //재정의 > 하지 말 것
+         console.log(a);
+
+         b= 40; // 변수 선언문 var을 사용하지 않고도 변수 생성이 가능하지만 > 하지 말 것 
+         
+         function m2(){
+            var d =50;
+            e=60 // var 선언문을 사용하지 않은 변수는 , 선언 위치와 무관하게 전역 변수로 취급한다.
+         }
+         m2();
+         console.log(e);
+
+    </script>
+</body>
+</html>

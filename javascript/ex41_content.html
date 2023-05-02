@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        td{
+            width: 126px;
+            height: 126px;
+            border: 1px solid black;
+        }
+        img{
+            display: block;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <!--  -->
+
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+
+    <script>
+    
+        const list =document.getElementsByTagName('td');
+        for(let i=0; i<list.length;i++){
+            list[i].onmousedown=function(){
+
+                    this.innerHTML='<img src="/css/images/rect_icon01.png">';
+
+            };
+        };
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="css/example.css">
+    <style>
+        #box{
+            width: 250px;
+            height: 188px;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+        #list{
+            outline: 5px solid red;
+            width: 1250px;
+            display: flex;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>고양이</h1> 
+    <div id="box">
+        <div id="list">
+            <img src="/css/images/cat01.jpg">
+            <img src="/css/images/cat02.jpg">
+            <img src="/css/images/cat03.jpg">
+            <img src="/css/images/cat04.jpg">
+            <img src="/css/images/cat05.jpg">
+        </div>
+    </div>
+    <hr>
+    <select id="sel">
+        <option value="0">고양이1</option>
+        <option value="1">고양이2</option>
+        <option value="2">고양이3</option>
+        <option value="3">고양이4</option>
+        <option value="4">고양이5</option>
+    </select>
+
+     <script>
+
+        const sel =document.getElementById('sel');
+        const list = document.getElementById('list');
+
+        let old = 0; //이전 고양이 value
+        sel.addEventListener('change',function(){
+            // alert(this.value);
+            list.style.transitionDuration=`${Math.abs(event.target.value-old)*0.5}s`;
+            list.style.transform=`translate(-${event.target.value*250}px,0)`;
+            
+            old = event.target.value;
+        });
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        <label>
+            아이디:
+            <input type="text" name="txtid" size="10">
+            <input type="button" value="중복검사" name="btncheck">
+        </label> 
+        <hr>
+        <input type="button" value="사용하기" name="btnok">
+        <input type="button" value="창닫기" name="btncancel">
+
+
+    </form>
+
+    <script>
+        var btnok = window.document.form1.btnok;
+        var txtid = window.document.form1.txtid;
+
+        btnok.onclick = m1;
+
+        function m1() {
+            //1. 자신의 텍스트박스 > 부모 텍스트박스 복사
+            //2. 창 닫기
+
+            opener.document.form1.txtid.value =txtid.value;
+
+            widnow.close();
+        }
+    </script>
+
+</body>
+</html>

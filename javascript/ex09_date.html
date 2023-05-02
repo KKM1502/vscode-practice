@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //내장 객체
+        // - Date
+
+        //현재 시각
+        var now = new Date() ;//new 생성자함수
+
+        console.log(now);
+        console.log(now.toString());
+        
+        //요소 추출
+        //- c.get(Calendar.YEAR) << 자바 
+        
+        //년,일,시,분,초 : 숫자 > 1부터 시작
+        //월,요일: 배열 > 0부터 시작
+        
+
+        console.log(now.getYear());         //23
+        console.log(now.getFullYear());     //2023
+        console.log(now.getMonth());        //0부터시작 월
+        console.log(now.getDate());         //날짜
+        console.log(now.getDay());          //일요일=0
+        console.log(now.getHours());        //시
+        console.log(now.getMinutes());      //분
+        console.log(now.getSeconds());      //초
+        console.log(now.getMilliseconds()); //밀리세컨드
+        console.log(now.getTime());         //틱(ms)
+
+        //출력 > %tF, %tT, %tA
+        console.log(now.toLocaleString());
+        console.log(now.toLocaleDateString());
+        console.log(now.toLocaleTimeString());
+
+
+        //특정 시각 만들기
+        //- c.set(Calendar.YEAR)
+        var christms = new Date();
+        christms.setFullYear(2023);
+        christms.setMonth(11);
+        christms.setDate(25);
+        
+        console.log(christms.toLocaleString());
+
+        //연산
+        //시각 - 시각 = 시간
+        console.log(christms-now); //ms
+        console.log((christms - now) /1000/60/60/24);
+
+
+        now.setTime(now.getTime()+(100*24*60*60*1000));
+        console.log(toLocaleString());
+
+    </script>
+</body>
+</html>

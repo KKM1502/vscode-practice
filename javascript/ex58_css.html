@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        .draggable{
+            position: relative;
+            left: 0;
+            top: 0;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="draggable">제목입니다.</h1>
+    <img src="/css/images/cat01.jpg" alt="" class="draggable">
+    <div class="box bg-red draggable" >상자1</div>
+    <div class="box bg-yellow draggable">상자2</div>
+    <div class="box bg-blue draggable">상자3</div>
+    
+    <script>
+        let isDown = false;
+        let x =0; y =0;
+        let obj;
+        let zindex=0;
+
+        // let ox=0 ; oy=0; //정적인 상태의 객체 위치값
+        let olist=[];
+
+        const list = document.getElementsByClassName('draggable');
+
+        for(let i=0;i<list.length; i++){
+            olist.push({
+                obj:list[i],
+                x: list[i].getBoundingClientRect().left,
+                y: list[i].getBoundingClientRect().top
+            });
+        }
+        console.log(olist);
+
+
+        window.onmousedown=function(){
+            if(event.target.classList.contains('draggable')){
+                obj=event.target;
+                isDown=true;
+                x=event.offsetX;
+                y=event.offsetY;
+                zindex++;
+                obj.style.zIndex=zindex;
+                ox= getLeft(obj);
+                oy= getTop(obj);
+            }
+        };
+
+        function getLeft(obj){
+            for(let i=0; i<olist.length; i++) {
+                if(olist[i].obj ==obj){
+                    return olist[i].x;
+                }
+            }
+        }
+        function getTop(obj){
+            for(let i=0; i<olist.length; i++) {
+                if(olist[i].obj ==obj){
+                    return olist[i].y;
+                }
+            }
+        }
+
+
+        window.onmousemove=function(){
+            if(isDown){
+                obj.style.left = event.clientX -ox -x+'px';
+                obj.style.top = event.clientY -y-oy +'px';
+            }
+        };
+        window.onmouseup=function(){
+            isDown=false;
+        };
+
+
+
+    </script>
+</body>
+</html>

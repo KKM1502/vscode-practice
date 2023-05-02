@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var txt = 'Hello~ Hong';
+        console.log(txt.length); //자바(field), 자바스크립트(property)
+
+      //검색 함수
+      console.log(txt.indexOf('~'));
+      console.log(txt.indexOf('~',6));
+      console.log(txt.lastIndexOf('~'));
+
+
+      //대소문자 변환
+      console.log(txt.toUpperCase());
+      console.log(txt.toLowerCase());
+
+      //추출
+      console.log(txt.substring(2,8));
+
+      console.log(txt.substr(2,4));
+      console.log(txt.substr(2));
+
+      console.log(txt.charAt(2));
+      console.log(txt.charCodeAt(2));//문자 코드값 추출 > () 형변환 연산 없음
+
+      //치환
+      txt = 'Hello~ Hong~ Bye~ Hong~';
+      console.log(txt.replace('Hello', 'Hi'));
+      console.log(txt.replaceAll('Hong', 'LEE'));
+      console.log(txt.replace(/Hong/g, 'LEE'));
+    
+      //공백 제거
+      txt = '    하나    둘      셋      ';
+      console.log(txt.trim());
+
+      //분할
+      txt ='홍길동,아무개,하하하,호호,후후후';
+      console.log(txt.split(','));
+      
+      //패턴검색
+      txt= '홍길동';
+      console.log(txt.startsWith('홍'));
+      console.log(txt.endsWith('동'));
+    
+
+    </script>
+   
+</body>
+</html>

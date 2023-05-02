@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        .box{
+            position: absolute;left: 0;top: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+
+    <script>
+    
+        //화면 클릭 >> 상자 생성 > 이동
+        const colors = ['bg-red','bg-green','bg-yellow','bg-blue','bg-orange'];
+
+
+        let index = 0;
+        window.onmousedown= function(){
+            if(event.buttons==1 && !event.ctrlKey){
+                let box = document.createElement('div') ;   //<div></div>
+                box.classList.add('box');                   //<div class="div"></div>
+                // box.classList.add('bg-red');                //<div class="div bg-red"></div>
+                box.classList.add(colors[index]);
+
+                box.style.left=event.clientX - 100 + 'px';
+                box.style.top=event.clientY - 100 +'px' ;
+                
+                document.body.appendChild(box);
+
+                index++;
+                if(index>=5)index=0;
+            }
+            else if(event.buttons==1 && event.ctrlKey){
+                if(event.target.classList.contains('box')){
+                    document.body.removeChild(event.target);
+
+
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

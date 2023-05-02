@@ -1,0 +1,94 @@
+*{
+    color: #555;
+    font-family: '맑은 고딕';
+}
+
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table th, .table td{
+    border: 1px solid black;
+}
+
+.table .wide{
+    width: 100%
+}
+
+.table.wide th, .table.wide td{
+    padding: 5px 10px;
+}
+
+.table.narrow{
+
+}
+
+.table.narrow th, .table.narrow td{
+    padding: 3px 5px;
+}
+
+.table.striped tr:nth-child(even){
+    background-color: #DDD;
+}
+.btn{
+    border: 1px solid #999;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.btn.primary{
+    background-color: cornflowerblue;
+}
+.btn.danger{
+    background-color: red;
+}
+.btn.warning{
+    background-color: gold;
+}
+.btn.smallP{
+    padding: 2px 5px;
+}
+.btn.smallP{
+    padding: 10px 20px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+
+}
+.box.small{
+    width: 100px;
+    height: 100px;
+}
+.box.large{
+    width: 300px;
+    height: 300px;
+}
+
+.box.bg-red{
+    background-color: tomato;
+}
+.box.bg-blue{
+    background-color: blue;
+}
+.box.bg-yellow{
+    background-color: yellow;
+}
+.box.bg-green{
+    background-color: green;
+}
+.box.bg-orange{
+    background-color: orange;
+}
+.box.fg-black{
+    color:black;
+}
+.box.fg-white{
+    color:white;
+}
+
+.box.inline{
+    display: inline-block;
+}

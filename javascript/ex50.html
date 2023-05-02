@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        border: 1px solid black;
+
+    }
+    #box1{
+        width: 500px;
+        height: 500px;
+        background-color: red;
+    }
+    #box2{
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+    }
+    #box3{
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <!--  -->
+
+    <div class="box" id="box1">
+        <div class="box" id="box2">
+            <div class="box" id="box3"></div>
+        </div>
+    </div>
+
+
+    <script>
+    
+        const box2=document.getElementById('box2');
+        const box1=document.getElementById('box1');
+        const box3=document.getElementById('box3');
+        // box2.onclick =function(){
+        //     alert('노랑'
+        //     +event.target.id        //유턴하는 객체
+        //     +event.srcElement.id    //유턴하는 객체
+        //     +this.id);              //onclick 객체
+        
+        //     alert(event.currentTarget.id);//this와 도일
+        
+        // }
+        // box1.onclick=function(){
+        //     alert('Red'+event.target.id);
+        // }
+
+        // box3.onclick = function(){
+        //     alert('파랑'+event.currentTarget.id);
+        //     event.cancelBubble=true;
+        // }
+
+            box1.addEventListener('click',function(){
+                alert('빨강');
+            },true);
+            //이벤트 버블링
+            box2.addEventListener('click',function(){
+                alert('파랑');
+            },true);
+            box3.addEventListener('click',function(){
+                alert('노랑');
+            },true);
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>window 객체</h1>
+    <form name="form1">
+        <fieldset> 
+            <!-- filedset - form형식을 그룹지어주는 역할 -->
+            <legend>창 제어</legend>
+            <input type="button" name="btn1" value="자식창 띄우기">
+            <input type="button" name="btn2" value="자식창 닫기">
+            <hr>
+            <input type="button" name="btn3" value="자식창 조작하기">
+        </fieldset>
+        <fieldset>
+            <legend>아이디</legend>
+            <input type="text" name="txtid" size="10">
+            <input type="button" value="중복검사" name="btncheck">
+        </fieldset>
+    </form>
+
+    <script>
+        var btn1 = window.document.form1.btn1;
+        var btn2 = window.document.form1.btn2;
+        var btn3 = window.document.form1.btn3;
+        var btncheck = window.document.form1.btncheck;
+
+        btn1.onclick=m1;
+        btn2.onclick=m2;
+        btn3.onclick=m3;
+        btncheck.onclick=m4;
+
+        function m4() {
+            window.open('ex17_idcheck.html','check', 'width=400, height=300');
+        }
+
+       
+
+        function m1(){
+            //window 객체
+            //- BOM 최상위 객체
+            //- 유일 > 브라우저 창을 참조하는 객체
+            //- window 객체 조작 > 브라우저 창 조작
+            //- 열기, 닫기, 이동하기, 사이즈 조절 등..
+
+            // window.open(); //부모창 > 자식창 생성
+            // window.close(); //자기 스스로 종료
+
+            //window.open(URL, Name, Options)
+            //1. URL: 새창의 URL
+            //2. Name: 새창의 이름
+            //3. Options: 옵션들..
+
+            // window.open('https://naver.com','naver',null);
+        
+            window.open('./ex17_child.html','child','width=300 height=200');
+
+        }
+        function m2(){
+
+            //자식창 닫기
+            window.close();
+        }
+        function m3(){
+            child.document.form1.txt1.value='부모창에서 왔습니다.';
+        }
+    </script>
+</body>
+</html>

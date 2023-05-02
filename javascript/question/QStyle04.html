@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="/css/css/normalize.css">
+    <style>
+    table{
+        border-collapse: collapse;
+        margin-top: 50px;
+
+    }
+    td{
+        width: 130px;
+        height: 130px;
+        border: 1px solid black;
+    }
+    .img{
+        width: 120px;
+        height: 120px;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <table id="tbl">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table >
+    </div>
+    <script>
+    
+    const sel = document.querySelectorAll('#tbl tr');
+    
+    let color = 200;
+
+    //각 요소에 접근
+    for(let i=0; i<sel.length; i++){
+        
+        for(let j=0;j<sel[0].children.length;j++){
+            
+
+                sel[i].children[j].onclick=f1;
+
+        }
+    }
+    
+    function f1(){   
+                
+        for( let k=0;k<sel.length;k++){
+            for(let l=0; l<sel[0].children.length;l++){
+
+                    sel[k].children[l].innerHTML="";
+ 
+            }
+        }
+        //색상 초기화
+        if(event.target.style.backgroundColor ==""){
+            event.target.style.backgroundColor="rgb("+color+","+color+","+color+")";
+        }
+        else{
+            
+            let c= parseInt(event.target.style.backgroundColor.substr(4,3));
+            c=c-50;
+            event.target.style.backgroundColor="rgb("+c+","+c+","+c+")";
+            
+            if(c==0){
+                event.target.onclick=null;
+            }
+        }
+        event.target.innerHTML = "<img src='/css/images/dog-foot.png'>";
+        
+        
+    }
+    
+		
+
+
+
+
+
+    </script>
+</body>
+</html>

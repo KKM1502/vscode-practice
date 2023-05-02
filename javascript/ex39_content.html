@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h1>content</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <hr>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+        
+        // BOM,DOM > 태그 조작
+        // 1. 태그 검색 BOM,DOM
+        // 2. 속성 조작 BOM,DOM
+        // 3. PCDATA 조작 DOM >innerText, textContent
+
+        /*
+        
+        콘텐츠 조작
+        - 시작 태그와 끝 태그 사이의 내용물 조작
+        1. innerText
+            -시작 태그와 끝 태그 사이의 문자열 읽기/ 쓰기 프로퍼티
+            -비표준
+            -태그 인식 못함
+        2. innerHTML
+            -태그 인식 함
+            -표준 
+        3. textContent
+
+        
+        */
+
+        const btn1 = document.getElementById('btn1');
+        div1.innerHTML = '<i>홍길동<i>';
+        btn1.onclick =function(){
+            div1.innerHTML+='<img src="/css/images/catty0'+n +'.png">'
+            n++;
+
+        }  
+        let n=0;
+    
+
+       
+    </script>
+</body>
+</html>

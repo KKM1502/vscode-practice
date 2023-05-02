@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="/css/css/normalize.css">
+    <style>
+     img{
+
+            width: 100px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="/css/images/cat01.jpg" onmouseover="f1();" id="cat" style="position: absolute; left: 70px;top: 70px;">
+     
+     <script>
+        function f1(){
+        //    alert(document.images[0].style.left);
+           const img = document.getElementById('cat');
+
+            
+            if(50<=event.clientX-parseInt(img.style.left)){
+                img.style.left = event.clientX-130+'px';
+            }
+            else{
+                img.style.left = event.clientX+30+'px';
+            }
+            
+        }
+    
+
+
+    
+     </script>
+</body>
+</html>

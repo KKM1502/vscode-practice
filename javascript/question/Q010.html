@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            padding-left: 10px;
+            height: 40px;
+        }
+        .number{
+            width: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <table>
+        <tr>
+            <td style="width:130px;">주민번호</td>
+            <td style="width:400px">
+                <input type="text" class="number" name="first" onkeyup="m1();">-
+                <input type="text" class="number" name="second"
+                onkeyup="m2();">
+            </td>
+        </tr>
+        <tr>
+            <td>생년월일</td>
+            <td>
+                <input type="text" class="birth" name="y" style="width:50px ;">년
+                <input type="text" class="birth" name="m" style="width:20px ;">월
+                <input type="text" class="birth" name="d" style="width:20px ;">일
+            </td>
+        </tr>
+        <tr>
+            <td>주민번호</td>
+            <td>
+                <input type="radio" name="man">남자
+                <input type="radio" name="woman">여자
+            </td>
+        </tr>
+    </table>
+    <script>
+        var f=document.all.first;
+        var s=document.all.second;
+        function m1(){
+            if(f.value.length>=6){
+             s.focus();
+                if(parseInt(f.value.substr(0,2))>23){
+                    document.all.y.value='19'+f.value.substr(0,2);
+                    document.all.m.value=f.value.substr(2,2);
+                    document.all.d.value=f.value.substr(4,2);
+                }
+                else{
+                    document.all.y.value='20'+f.value.substr(0,2);
+                    document.all.m.value=f.value.substr(2,2);
+                    document.all.d.value=f.value.substr(4,2);
+                }
+            }
+        }
+        function m2(){
+            if(s.value.substr(0,1)=='1'){
+                document.all.man.checked=true;
+                document.all.woman.checked=false;
+            }
+            else{
+                document.all.woman.checked=true;
+                document.all.man.checked=false;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

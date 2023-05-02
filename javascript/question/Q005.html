@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .menu{
+            border: 1px solid black;
+            float: left;
+            width: 200px;
+            height: 220px;
+
+        
+        }
+        .menu .box{
+            text-align: center;
+            width: 150px;
+            height: 30px;
+            margin: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+        .img{
+            width:300px;
+            height: 231px;
+            float: left;
+            padding-left: 50px;
+            position:relative;
+            left:0;
+            top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="menu">
+        <div class="box" onmouseover="m1(1);" onclick="m2(1);">강아지1</div>
+        <div class="box" onmouseover="m1(2);" onclick="m2(2);">강아지2</div>
+        <div class="box" onmouseover="m1(3);" onclick="m2(3);">강아지3</div>
+        <div class="box" onmouseover="m1(4);" onclick="m2(4);">강아지4</div>
+        <div class="box" onmouseover="m1(5);" onclick="m2(5);">강아지5</div>
+    </div>
+    <div class="img">
+        <img src="/css/images/dog01.jpg" name="dog">
+    </div>
+</div>
+<script>
+    function m1(i){
+        document.images['dog'].src='/css/images/dog0'+i+'.jpg';
+    }
+
+    function m2(i){
+        m1(i);
+        window.open('/css/images/dog0'+i+'_big.jpg');
+    }
+
+
+</script>
+</body>
+</html>

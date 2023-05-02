@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="css/example.css">
+    <style>
+        #header{
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto ;
+        }
+        #tbl{
+            width: 800px;
+        }
+        #tbl td{
+            text-align: center;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 id="date"></h1>
+        <div>
+            <input type="button" value="이전달" id="btnPrev">
+            <input type="button" value="현재" id="btnNow">
+            <input type="button" value="다음달" id="btnNext">
+        </div>
+    </div>
+    
+    <table id="tbl" class="table">
+        <thead>
+            <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    
+    <script>
+    const date = document.getElementById('date')    ;
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNow = document.getElementById('btnNow');
+    const btnNext = document.getElementById('btnNext');
+    const tbody = document.querySelector('#tbl tbody');
+
+    let year, month;
+    let now = new Date();
+    year = now.getFullYear();
+    month = now.getMonth();
+    
+    function createCalendar(year,month){
+
+        date.textContent = year +'.' + (month+1);
+        
+        //달력 만들기
+        //1. 해당월의 마지막날짜
+        //2. 해당월 1일의 요일
+        console.log(now.toLocaleDateString());
+        let firstDay = new Date(year, month, 1).getDay();
+        let lastDate = new Date(year, month+1, 0).getDate();
+        console.log(firstDay);
+        console.log(lastDate);
+
+
+        //날짜생성
+        let temp='<tr>';
+
+        for(let i =0; i<firstDay;i++){
+            temp+='<td></td>';
+        }
+
+        for (let i=1; i<=lastDate; i++){
+            temp+='<td>';
+            temp+=i;
+            temp+='</td>';
+
+            if((i+firstDay)%7==0){
+                temp+='</tr><tr>';
+            }
+        }
+        for(let i=0; i<6- (new Date(year, month+1, 0).getDay());i++){
+            temp+='<td></td>'
+        }
+        temp+='</tr>'
+        tbody.innerHTML=temp;
+
+    }
+    createCalendar(year,month);//현재 달 출력
+
+    btnPrev.onclick=()=>{
+        now.setMonth(now.getMonth()-1);
+        year = now.getFullYear();
+        month = now.getMonth();
+        createCalendar(year,month);
+    };
+
+    btnNow.onclick=()=>{
+        const now = new Date();
+        year = now.getFullYear();
+        month = now.getMonth();
+        createCalendar(year,month);
+    };
+
+    btnNext.onclick=()=>{
+        now.setMonth(now.getMonth()+1);
+        year = now.getFullYear();
+        month = now.getMonth();
+        createCalendar(year,month);
+    };
+
+    </script>
+</body>
+</html>

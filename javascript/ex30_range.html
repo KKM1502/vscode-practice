@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+            padding: 10px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1>배경색</h1>
+    <label>R <input type="range" name="red" min="0" max="255" value="255"></label>
+    <label>G <input type="range" name="green" min="0" max="255" value="255"></label>
+    <label>B <input type="range" name="blue" min="0" max="255" value="255"></label>
+
+
+    <script>
+        var red = document.all.red;
+        red.onchange=m1;
+        function m1(){
+            console.log(red.value,paseInt(red.value).toString(16));
+        }
+
+    </script>
+    
+
+</body>
+</html>

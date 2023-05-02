@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!--  -->
+    <h1>DOM Event</h1>
+
+    <input type="button" value="BOM" id="btn1" name="btn1">
+    <input type="button" value="DOM" id="btn2" name="btn2">
+    
+    
+    
+    <script>
+        //BOM
+        // window.document.all.btn1.onclick = function(){
+        //     alert('BOM');
+        // };
+        
+        // //DOM
+        // document.getElementById('btn2').addEventListener('click', function(){
+        //     alert('DOM');
+        // });
+
+        
+        const btn1 = document.getElementById('btn1')
+        const btn2 = document.getElementById('btn2')
+
+        // 이벤트 매핑 관리 불가능
+        btn1.onclick=m1;
+        btn1.onclick=m2; //덮어쓰기
+        btn1.onclick-null; //이벤트 제거
+
+        
+        //이벤트 매핑을 관리할 수 있다. > Invocation ist(이벤트 함수 목록)
+        btn2.addEventListener('click', m1);
+        btn2.addEventListener('click', m2); //누적
+        btn2.removeEventListener('click', m1); //골라서 제거
+
+        function m1(){
+            alert('m1');
+        }
+        function m2(){
+            alert('m2');
+        }
+
+    </script>
+</body>
+</html> 

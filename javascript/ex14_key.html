@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>키 이벤트</h1>  
+    <form name="form1">
+        <input type="text" name="txt1">
+        <br>
+        <input type="text" name="txt2">
+        <br>
+        <textarea name="txt3"></textarea>
+
+        <script>
+            var txt1 = window.document.form1.txt1;
+            var txt2 = window.document.form1.txt2;
+            var txt3 = window.document.form1.txt3;
+
+            /*
+                키 관련 이벤트
+                - onkeyXXX
+                - 포커스를 가지는 태그에서만 발생(텍스트 박스, 체크 박스 등)
+
+                요즘 키보드 > 연속입력(o)
+
+                1.onkeydown
+                    -키를 눌렀을 때
+                    - 문자에 반응 x 
+                    - 물리키에 반응하는 이벤트 > 어떤 문자가 입력되었는지는 중요x  /  어떤 키를 눌렀는지가 중요o
+                    -키보드에 존재하는 모든 키에 반응
+                    event.keycode = 아스키코드
+                    -방금 입력한 문자는 필요 없을때 사용
+
+                2.onkeyup
+                    -키를 떼었을 때
+                    -방금 입력한 문자가 필요할때 사용
+
+                3.onkeypress
+                    -키를 누르고 있을때
+                    - 잘 사용 안함 
+
+
+            */
+            //키 입력
+            //1. keydownb 발생 > 실제 문자 입력 > keyup 발생
+            txt1.onkeydown =m1;
+            txt1.onkeyup =m2;
+            txt1.onkeypress =m3;
+            
+            function m1(evt){
+                console.log('onkeydown');
+                console.log(event.keycode);
+                
+                console.log(evt.keycode);//표준
+                //방향키
+                // - 좌(47), 상(38), 우(39), 하(40)
+                // txt2.value=txt1.value;
+            }
+            // function m2(){
+            //     console.log('onkeyup');
+            // }
+            // function m3(){
+            //     console.log('onkeypress');
+            // }
+        
+        
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <h1>Event</h1>
+    <form name="form1">
+        <input type="text" name="txt1">
+        <input type="button" value="확인(정적이벤트)" name="btn1" onclick="window.document.form1.txt1.value = '홍길동';">
+        <input type="button" value="확인(동적이벤트)" name="btn2" on>
+
+    </form>
+
+
+    <script>
+        /*
+        
+            Event
+            - 사건
+            - 객체(혹은 태그)
+            - 언제 발생할지 예측 불가능 
+
+            JS Event Handling
+            - 이벤트 등록(구현)
+            - 사건 처리
+            - 언제 발생할지 예측 불가능한 사건에 대해 처리를 하고싶다. > 언젠가 사건이 발생하면 처리하기 위한 코드를 미리 준비한다. > 사건과 연결
+
+            1. 정적
+                -HTML 태그에 직접 적용
+
+            2. 동적
+                -JS 코드를 사용
+        */
+
+        // widnow.document.form1.btn2.onclick = m1; //함수 포인터
+
+        var now = new Date();
+
+        if(now.getHours() <12){
+            window.document.form1.btn2.onclick=m2;
+        }else{
+            window.document.form1.btn2.onclick=m3;
+        }
+
+        function m2() { 
+            window.document.form1.txt1.value='오전입니다.';
+        }
+
+        function m3() { 
+            window.document.form1.txt1.value='오후입니다.';
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        .draggable{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="draggable">제목입니다.</h1>
+    <div class="box bg-red draggable" >상자1</div>
+    <div class="box bg-yellow draggable">상자2</div>
+    <div class="box bg-blue draggable">상자3</div>
+    <script>
+        let isDown = false;
+        let x =0; y =0;
+        let obj;
+        let zindex=0;
+        window.onmousedown=function(){
+            if(event.target.classList.contains('draggable')){
+                obj=event.target;
+                isDown=true;
+                x=event.offsetX;
+                y=event.offsetY;
+                zindex++;
+                obj.style.zIndex=zindex;
+            }
+        };
+        window.onmousemove=function(){
+            if(isDown){
+                obj.style.left = event.clientX -x +'px';
+                obj.style.top = event.clientY -y +'px';
+            }
+        };
+        window.onmouseup=function(){
+            isDown=false;
+        };
+
+
+
+    </script>
+</body>
+</html>

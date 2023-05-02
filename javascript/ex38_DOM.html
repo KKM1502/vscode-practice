@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- ex38_DOM.html -->
+    <h1>DOM</h1>
+
+    <form name="form1">
+        <he id="title">Control</he>
+        <div>
+            <input type="text" id="txt1" class="txt" name="txt1">
+            <input type="text" id="txt2" class="txt" name="txt2">
+            <input type="text" id="txt3" class="txt" name="txt3">
+            <input type="button" value="확인" name="btn1" id="btn1">
+        </div>
+    </form>
+
+
+
+    <script>
+        //BOM > name 사용 , id/class 인식 불가능
+        //DOM > name, id, class 모두 사용
+
+
+        /*
+            DOM, Document Object Model
+            - BOM 다음 버전
+            - 모든 태그 조작 가능
+            - 기능 풍부
+            - DOM Level 1 > DOM level 2 > DOM level 3
+            - DOM Level 0 (BOM을 이렇게 부르는 사람들이 있음)
+
+            DOM > 태그 검색
+
+            1. id 검색
+            2. class 검색
+            3. name 검색
+            4, 태그명 검색
+            5. CSS 선택자
+
+            DOM > BOM 확장
+            - *** DOM의 모든 기능을 BOM의 document 내부에 구현해놨다.
+
+            DOM > 태그 검색
+
+            1.id 검색 > document.getElementbyId('id')
+            2.class 검색         > document.getElementsByClassName('class')
+            3. name 검색         > document.getElementsByName('name')
+            4. 태그명 검색        > document.getElementsByTagName('tag')
+            5. CSS 선택자 검색    > document.querySelector('selector')
+            6.                   > document.querySelectorAll('selector')
+
+
+        */
+
+        //<input type="text" id="txt1" class="txt" name="txt1">
+        //BOM
+        window.document.form1.txt1.value = 'BOM';
+        
+        //DOM
+        document.getElementById('txt2').value = 'DOM';
+
+        for(let i=0;i<txt.length;i++){
+            txt[i].value=i;
+        }
+
+
+    </script>
+</body>
+</html>

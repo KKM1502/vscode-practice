@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../css/images/catty01.png" name="cat1" >
+    <hr>
+    <form name="form1">
+        <div>
+            <input type="text" name="txt1">
+        </div>
+    </form>
+    <script>
+
+        /*
+        CSS : 선택자 > 태그 검색 > 접근 > 서식 조작
+        JS : 검색도구 > 태그 검색> 접근 >태그 조작 
+        
+        HTML 계층 구조 활용 + JS 탐색
+        1. BOM , Browser Object Model
+            - 초창기 모델
+            - 현재까지 계속 사용
+            - 선택적 모델 > 일부 태그만 관리 > 일부 태그만 조작이 가능 
+            조작 불가능
+            - 이미지, 링크, 폼 태그 이ㅚ에는 조작이 불필요하다고 판단.
+            - 태그의 name을 사용해서 접근
+
+        2. DOM, Document Object Model
+            - BOM > 개선한 모델
+            - 현재까지 계속 사용
+            - BOM 기반 + 기능 추가
+            - 모든 태그를 인식 > 모든 태그를 조작
+            - name, id, class 모두 인식 가능
+        */
+
+        window.document.images[0].title ='고양이';
+        window.document.form1.txt1.size=10;
+
+        
+    </script>
+
+    
+</body>
+
+</html>

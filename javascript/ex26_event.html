@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .item{
+            border: 1px solid #CCC;
+            background-color: #eee;
+            padding: 10px;
+            margin:15px;
+            width: 400px;
+            text-align: center;
+
+        }
+        .item > input[type=button] {
+            border: 1px solid #CCC;
+            background-color: #fff;
+            width: 100px ;
+            height: 60px;
+            margin: 10px;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        다량의 요소(태그)의 이벤트 (일괄)처리 
+    </h1>    
+    
+    <div class="item">
+        <input type="button" name="btnRed" value="빨강" onclick="m1();">
+        <input type="button" name="btnYellow" value="노랑" onclick="m2();">
+        <input type="button" name="btnBlue" value="파랑" onclick="m3();">
+    </div>
+    <div class="item">
+        <input type="button" name="btnRed2" value="빨강" >
+        <input type="button" name="btnYellow2" value="노랑" >
+        <input type="button" name="btnBlue2" value="파랑" >
+    </div>
+    <div class="item">
+        <input type="button"  value="빨강" onclick="m7('red');">
+        <input type="button"  value="노랑" onclick="m7('yellow');">
+        <input type="button"  value="파랑" onclick="m7('blue');">
+    </div>
+
+    <div class="item">
+        <input type="button" value="red" onclick="m8(this);"
+        data-color="red">
+        <input type="button" value="yellow" onclick="m8(this);"
+        data-color="yellow">
+        <input type="button" value="blue" onclick="m8(this);"
+        data-color="blue">
+    </div>
+
+    <div class="item">
+        <input type="button" value="red" onclick="m10(this);"
+        data-color="red">
+        <input type="button" value="yellow" onclick="m10(this);"
+        data-color="yellow">
+        <input type="button" value="blue" onclick="m10(this);"
+        data-color="blue">
+    </div>
+    <div class="item">
+        <input type="button" value="red" onclick="m11();"
+        data-color="red">
+        <input type="button" value="yellow" onclick="m11();"
+        data-color="yellow">
+        <input type="button" value="blue" onclick="m11();"
+        data-color="blue">
+    </div>
+    <div class="item">
+        <input type="button" value="red" data-color="red">
+        <input type="button" value="yellow" data-color="yellow">
+        <input type="button" value="blue" data-color="blue">
+    </div>
+
+    <div class="item">
+        <input type="button" name="btn" value="red" data-color="red">
+        <input type="button" name="btn" value="yellow" data-color="yellow">
+        <input type="button" name="btn" value="blue" data-color="blue">
+    </div>
+<hr>
+    <div>
+        <img src="/css/images/cat01.jpg" name="cat">
+        <img src="/css/images/cat02.jpg" name="cat">
+        <img src="/css/images/cat03.jpg" name="cat">
+        <img src="/css/images/cat04.jpg" name="cat">
+        <img src="/css/images/cat05.jpg" name="cat">
+    </div>
+
+    <script>
+        function m1(){
+            document.body.bgColor='red';
+        }
+        function m2(){
+            document.body.bgColor='yellow';
+        }
+        function m3(){
+            document.body.bgColor='blue';
+        }
+        document.all.btnRed2.onclick=m4;
+        document.all.btnYellow2.onclick=m4;
+        document.all.btnBlue2.onclick=m4;
+        function m4(){
+            document.body.bgColor='red';
+        }
+        function m7(color){
+            document.body.bgColor=color;
+        }
+
+        //함수 내의 this는 window 객체를 말한다.
+        function m8(btn){
+
+            // alert(btn.value);
+            document.body.bgColor=btn.value;
+
+        }
+        function m10(btn){
+            document.body.bgColor=btn.dataset['color'];
+        }
+        function m11(){
+            //어떤 버튼이 눌렸는지 알 수 없다.
+            document.body.bgColor=event.target.dataset['color'];
+        }
+
+        //1. name 유일 > 단일 객체 
+        //2. name 중복 > 배열 
+        for(var i =0; i<document.all.btn.length; i++){
+            document.all.btn[i].onclick = m13;
+        }
+        function m13(){
+            document.body.bgColor=event.target.dataset['color'];
+        }
+        for(var i =0; i<document.all.cat.length; i++){
+            document.all.cat[i].onclick = m14;
+        }
+        function m14(){
+            document.body.bgColor='red';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            width: 600px;
+        }
+        fieldset{
+            width: auto;
+            float: left;
+        }
+        input{
+            border: none;
+            width: 600px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <form name="form1">
+        <fieldset>
+            <img src="/css/images/img01.jpg" name="img01" onmouseover="m1(1)" onmouseout="m2(1)" >
+            <img src="/css/images/img02.jpg" name="img02" onmouseover="m1(2)" onmouseout="m2(2)">
+            <img src="/css/images/img03.jpg" name="img03" onmouseover="m1(3)" onmouseout="m2(3)">
+        </fieldset>
+        <input type="text" name="txt1">
+    </form>
+    
+    <script>
+        function m1(i){
+            var n= i+3;
+            document.images['img0'+i].src='/css/images/img0'+n+'.jpg';
+            if(i==1){
+                document.form1.txt1.value='\'스키\'타는 사람이 \'당근\'으로 변했습니다.';
+            }
+            else if(i==2){
+                document.form1.txt1.value='\'해바라기\'가\'피망\'으로 변했습니다.';
+            }
+            else{
+                document.form1.txt1.value='\'나무\'가 \'개\'가 됐습니다.';
+            }
+            
+        }
+        function m2(i){
+            document.images['img0'+i].src='/css/images/img0'+i+'.jpg';
+            document.form1.txt1.value='';
+        }
+
+
+
+    </script>
+</body>
+</html>

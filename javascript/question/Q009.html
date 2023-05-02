@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form{
+            margin-top: 20px;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h3>주문하기</h3>
+    
+    <form name="form1">
+        <fieldset>
+            <legend>주문하시는 분</legend>
+            이름: <input type="text" name="name">
+            <br>
+            주소: <input type="text" name="addr">
+
+        </fieldset>
+    </form>
+    <br>
+    <input type="checkbox" onclick="m1();"> 주문하시는 분과 정보가 동일합니다.
+    <br>
+    <form name="form2">
+        <fieldset>
+            <legend>받으시는 분</legend>
+            이름: <input type="text" name="name">
+            <br>
+            주소: <input type="text" name="addr">
+
+        </fieldset>
+    </form>
+
+    <script>
+
+        function m1(){
+            document.form2.name.value=document.form1.name.value;
+            document.form2.addr.value=document.form1.addr.value;
+        }
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">
+        </div>
+    </div>
+
+    <a href="https://www.naver.com/" id="link1">이동</a>
+    <hr>
+    <input type="text" id="txt1">
+    <!--  -->
+
+    <script>
+        //1.이벤트 버블링을 중단
+        //a. event.cancelBubble = true; > 비표준(MS) > IE 전용
+        //b. event.stopPropagation(); > 표준
+
+        const p = document.getElementById('parent');
+        const c = document.getElementById('child');
+        
+
+        p.onclick= function(){
+            alert('부모');
+        }
+        c.onclick= function(){
+            // alert('자식');
+            // // event.cancelBubble=true;
+            // if(event.stopPropagation){
+            //     //현재 브라우저가 stopPropagation 함수를 지원함
+            // }else{
+            //     //현재 브라우저가 stopPropagation 함수 지원 안함
+            //     event.cancelBubble=true;
+            // }
+
+        }
+
+
+        const link1=document.getElementById('link1');
+        const txt1 = document.getElementById('txt1');
+        link1.onclick = function() {
+            alert();
+        };
+
+        //클릭 이벤트 > 페이지 이동
+        link1.onclick = function(){
+            //alert();
+            return false;
+        };
+
+        //keydown > 문자 반영 > keyup
+        txt1.onkeydown = function(){
+            // return false;
+
+            if(event.keyCode >= 48 && event.keyCode<=57){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

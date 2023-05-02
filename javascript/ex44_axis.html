@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            border: 1px solid gray;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <h1>테이블</h1>
+    <table class="tbl1" id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h1>테이블</h1>
+    <table class="tbl1" id="tbl2">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h1>테이블</h1>
+    <table class="tbl1" id="tbl3">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        const tbl1 = document.getElementById('tbl1');
+        //<table> <tbody> <tr> <td>
+        // alert(tbl1.children[0].children.length);//1, tbody
+        for(let i=0; i<tbl1.children[0].children.length;i++){
+            const tr=tbl1.children[0].children[i];
+            for(let j=0;j<tr.children.length;j++){
+                tr.children[j].onmousedown=function(){
+                    event.target.bgColor='gold';
+                }
+            }
+        }
+        const list= document.querySelectorAll('#tbl1 td');
+        alert(list.length);
+    </script>
+</body>
+</html>

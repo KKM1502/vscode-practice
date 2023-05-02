@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        <input type="button" name="btn1" value="확인">
+    </form>
+
+
+    <script>
+        window.document.form1.btn1.onclick = m1;
+        function m1() {
+            //location 객체
+            //- window의 자식
+            //- 현재 창의 페이지(URL)와 관련된 조작
+            
+            //href = reference a hyperlink
+            // console.log(window.location.href);
+            // window.location.href='http://naver.com';
+            console.log(window.location.host);
+            console.log(window.location.hostname);
+            console.log(window.location.protocol);
+            console.log(window.location.port);
+
+            // window.location.href > ****
+        }
+
+    </script>
+</body>
+</html>
